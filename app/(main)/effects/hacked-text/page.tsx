@@ -1,4 +1,4 @@
-import HackedText from "@/components/effects/hacked-text";
+import HackedText from "@/components/effects/effects-ui/hacked-text";
 import { Main } from "@/components/uis/main";
 
 export default function HackedTextPage() {
