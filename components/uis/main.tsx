@@ -6,6 +6,7 @@ const mainVarients = cva("min-h-screen py-4 space-y-4", {
     variant: {
       default: "container",
       md: "py-4 max-w-5xl mx-auto container space-y-4",
+      center: "flex justify-center items-center",
     },
   },
   defaultVariants: {
