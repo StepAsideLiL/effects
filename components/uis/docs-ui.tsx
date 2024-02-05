@@ -1,5 +1,35 @@
 import { cn } from "@/lib/utils";
+import { MoveDown } from "lucide-react";
 import Link from "next/link";
+
+// Container for the component preview section.
+export function ComponentContain({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <section
+      className={cn(
+        "min-h-screen relative flex flex-col items-center justify-center",
+        className
+      )}
+    >
+      {children}
+    </section>
+  );
+}
+
+// Link to  Move to docum.
+export function MoveToDocLink() {
+  return (
+    <Link href={"#doc"} className="absolute bottom-10">
+      <MoveDown />
+    </Link>
+  );
+}
 
 // Container for the document section.
 export function DocContain({
@@ -38,7 +68,9 @@ export function DocTitle({
   className?: string;
 }) {
   return (
-    <h1 className={cn("text-4xl font-semibold", className)}>{children}</h1>
+    <h1 className={cn("text-4xl font-semibold", className)} id="doc">
+      {children}
+    </h1>
   );
 }
 
@@ -61,13 +93,10 @@ export function DocSectionTitle({
   children?: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <h2 className={cn("text-2xl font-medium", className)} id="effects">
-      {children}
-    </h2>
-  );
+  return <h2 className={cn("text-2xl font-medium", className)}>{children}</h2>;
 }
 
+// Link style in the documents.
 export function DocLink({
   children,
   className,
