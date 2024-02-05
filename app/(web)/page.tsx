@@ -29,10 +29,10 @@ export default function HomePage() {
         <p className="text-xl font-medium text-center">FOR</p>
 
         <section className="flex justify-center items-center gap-10">
-          <Link href={`https://nextjs.org/`}>
+          <Link href={`https://nextjs.org/`} target="_blank">
             <NextjsIcon />
           </Link>
-          <Link href={`https://ui.shadcn.com/`}>
+          <Link href={`https://ui.shadcn.com/`} target="_blank">
             <ShadcnIcon />
           </Link>
         </section>
