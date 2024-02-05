@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Logo from "@/components/uis/logo";
-import { ArrowLeft, Menu } from "lucide-react";
+import { Menu, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import { effects } from "@/components/effects/effects";
 import { cn } from "@/lib/utils";
@@ -51,7 +51,7 @@ export default function EffectsNav() {
 
       <Button variant={"ghost"} size={"icon"}>
         <Link href={"/effects"}>
-          <ArrowLeft />
+          <MoveLeft />
         </Link>
       </Button>
     </header>
