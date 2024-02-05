@@ -29,6 +29,30 @@ export function DocSection({
   return <section className={cn("space-y-2", className)}>{children}</section>;
 }
 
+// Name of the Effects.
+export function DocTitle({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h1 className={cn("text-4xl font-semibold", className)}>{children}</h1>
+  );
+}
+
+// Description of the Effects.
+export function DocDecscription({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return <h3 className={cn("text-muted-foreground", className)}>{children}</h3>;
+}
+
 // Title of the sections.
 export function DocSectionTitle({
   children,
@@ -37,9 +61,7 @@ export function DocSectionTitle({
   children?: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <h3 className={cn("text-2xl font-semibold", className)}>{children}</h3>
-  );
+  return <h2 className={cn("text-2xl font-medium", className)}>{children}</h2>;
 }
 
 export function DocLink({
