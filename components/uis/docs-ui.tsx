@@ -61,7 +61,11 @@ export function DocSectionTitle({
   children?: React.ReactNode;
   className?: string;
 }) {
-  return <h2 className={cn("text-2xl font-medium", className)}>{children}</h2>;
+  return (
+    <h2 className={cn("text-2xl font-medium", className)} id="effects">
+      {children}
+    </h2>
+  );
 }
 
 export function DocLink({
