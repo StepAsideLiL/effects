@@ -18,7 +18,7 @@ export default function Code({
 }) {
   if (copy) {
     return (
-      <>
+      <section className="font-mono text-sm">
         {filename && (
           <>
             <CodeBlock
@@ -38,12 +38,12 @@ export default function Code({
           theme={tomorrowNight}
           codeBlock
         />
-      </>
+      </section>
     );
   }
 
   return (
-    <>
+    <section className="font-mono text-sm">
       {filename && (
         <>
           <CodeBlock
@@ -62,6 +62,6 @@ export default function Code({
         startingLineNumber={1}
         theme={tomorrowNight}
       />
-    </>
+    </section>
   );
 }
