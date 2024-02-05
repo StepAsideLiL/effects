@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sheet,
   SheetContent,
@@ -9,12 +11,16 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Logo from "@/components/uis/logo";
 import { ArrowLeft, Menu } from "lucide-react";
 import Link from "next/link";
-import EffectsSidebar from "./effects-sidebar";
+import { effects } from "@/components/effects/effects";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export default function EffectsNav() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="container fixed top-3 flex items-center gap-3">
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="outline" size={"icon"}>
             <Menu />
@@ -27,7 +33,18 @@ export default function EffectsNav() {
           </SheetHeader>
 
           <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-10">
-            <EffectsSidebar />
+            <nav className="flex flex-col gap-2">
+              {effects.map((list) => (
+                <Link
+                  key={list.herf}
+                  href={list.herf}
+                  className={cn("text-sm hover:underline")}
+                  onClick={() => setOpen(false)}
+                >
+                  {list.title}
+                </Link>
+              ))}
+            </nav>
           </ScrollArea>
         </SheetContent>
       </Sheet>
