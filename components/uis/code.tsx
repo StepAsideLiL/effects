@@ -1,16 +1,36 @@
 "use client";
 
-import { CopyBlock, tomorrowNight } from "react-code-blocks";
+import { CodeBlock, CopyBlock, tomorrowNight } from "react-code-blocks";
 
-export default function Code({ file }: { file: string }) {
+export default function Code({
+  code,
+  copy = true,
+  lineNumber = true,
+}: {
+  code: string;
+  copy?: boolean;
+  lineNumber?: boolean;
+}) {
+  if (copy) {
+    return (
+      <CopyBlock
+        text={code}
+        language={"jsx"}
+        showLineNumbers={lineNumber}
+        startingLineNumber={1}
+        theme={tomorrowNight}
+        codeBlock
+      />
+    );
+  }
+
   return (
-    <CopyBlock
-      text={file}
+    <CodeBlock
+      text={code}
       language={"jsx"}
-      showLineNumbers={true}
+      showLineNumbers={lineNumber}
       startingLineNumber={1}
       theme={tomorrowNight}
-      codeBlock
     />
   );
 }
