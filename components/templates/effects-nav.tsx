@@ -19,7 +19,7 @@ export default function EffectsNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="container fixed top-3 flex items-center gap-3">
+    <header className="container fixed top-3 flex items-center gap-3 z-50">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="outline" size={"icon"}>
