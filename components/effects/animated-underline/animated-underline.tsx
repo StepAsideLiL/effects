@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const animatedUnderlineVariants = cva(
-  "relative after:content-[''] after:absolute after:bottom-0 after:block after:bg-none after:bg-repeat after:bg-scroll after:bg-left-top after:bg-foreground after:h-[0.5px] after:transition-all after:duration-300 after:ease-out after:delay-0",
+  "w-fil relative after:content-[''] after:absolute after:bottom-0 after:block after:bg-none after:bg-repeat after:bg-scroll after:bg-left-top after:bg-foreground after:h-[0.5px] after:transition-all after:duration-300 after:ease-out after:delay-0",
   {
     variants: {
       variant: {
