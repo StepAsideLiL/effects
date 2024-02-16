@@ -15,15 +15,9 @@ export default async function CopyTextDoc() {
     "utf8"
   );
 
-  const useage = `import CopyText from "@/components/effects/copy-text";
+  const usageImports = `import CopyText from "@/components/effects/copy-text";`;
 
-export default function Page() {
-  return (
-    <main>
-      <CopyText>npx create-next-app@latest</CopyText>
-    </main>
-  );
-}`;
+  const usageComponents = `<CopyText>npx create-next-app@latest</CopyText>`;
 
   return (
     <DocContain>
@@ -34,9 +28,13 @@ export default function Page() {
 
       <DocSection>
         <DocSectionTitle>Required Packages</DocSectionTitle>
-        <DocLink href="https://ui.shadcn.com/docs/installation/next">
-          Nextjs and Shadcn/ui
-        </DocLink>
+        <p>
+          Set up a{" "}
+          <DocLink href="https://ui.shadcn.com/docs/installation/next">
+            Nextjs and Shadcn/ui
+          </DocLink>{" "}
+          project CSS color variables
+        </p>
       </DocSection>
 
       <DocSection>
@@ -51,7 +49,12 @@ export default function Page() {
 
       <DocSection>
         <DocSectionTitle>Usage</DocSectionTitle>
-        <CodeBlock code={useage} filename="page.tsx" className="w-full" />
+        <CodeBlock code={usageImports} filename="page.tsx" className="w-full" />
+        <CodeBlock
+          code={usageComponents}
+          filename="page.tsx"
+          className="w-full"
+        />
       </DocSection>
     </DocContain>
   );
