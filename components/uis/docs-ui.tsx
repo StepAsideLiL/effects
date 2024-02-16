@@ -25,8 +25,11 @@ export function ComponentContain({
 // Link to  Move to docum.
 export function MoveToDocLink() {
   return (
-    <Link href={"#doc"} className="absolute bottom-10">
-      <MoveDown />
+    <Link
+      href={"#doc"}
+      className="absolute left-10 bottom-10 flex items-center gap-2"
+    >
+      Go to Doc <MoveDown size={"16"} />
     </Link>
   );
 }
