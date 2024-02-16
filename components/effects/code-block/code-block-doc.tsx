@@ -16,21 +16,10 @@ export default async function CodeBlockDoc() {
     "utf8"
   );
 
-  const usage = `import { promises as fs } from "fs";
-import CodeBlock from "@/components/effects/code-block";
-  
-export default async function Page() {
-  const file = await fs.readFile(
-    process.cwd() + "/components/effects/code-block.tsx",
-    "utf8"
-  );
+  const usageImports = `import { promises as fs } from "fs";
+import CodeBlock from "@/components/effects/code-block`;
 
-  return (
-    <main>
-      <CodeBlock code={file} filename="code-block.tsx" hfit={false} />
-    </main>
-  );
-}`;
+  const usageComponents = `<CodeBlock code={file} filename="code-block.tsx" hfit={false} />`;
 
   return (
     <DocContain>
@@ -46,7 +35,7 @@ export default async function Page() {
           <DocLink href="https://ui.shadcn.com/docs/installation/next">
             Nextjs and Shadcn/ui
           </DocLink>{" "}
-          project
+          project CSS color variables
         </p>
         <p>Add install</p>
         <CopyText className="w-full">
@@ -67,13 +56,21 @@ export default async function Page() {
 
       <DocSection>
         <DocSectionTitle>Usage</DocSectionTitle>
+        <CodeBlock code={usageImports} filename="page.tsx" className="w-full" />
         <CodeBlock
-          code={usage}
+          code={usageComponents}
           filename="page.tsx"
-          hfit={false}
           className="w-full"
         />
+        <p>
+          If the height of the code content is greater than <Code>h-96</Code>{" "}
+          set <Code>hfit</Code> as <Code>false</Code>
+        </p>
       </DocSection>
     </DocContain>
   );
+}
+
+function Code({ children }: { children: string }) {
+  return <code className="bg-muted px-1 py-0.5 rounded">{children}</code>;
 }
