@@ -5,14 +5,19 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const animatedUnderlineVariants = cva(
-  "relative after:content-[''] after:absolute after:bottom-0 after:block after:bg-none after:bg-repeat after:bg-scroll after:bg-left-top after:bg-foreground after:h-[0.5px] after:w-0 after:transition-all after:duration-300 after:ease-out after:delay-0",
+  "relative after:content-[''] after:absolute after:bottom-0 after:block after:bg-none after:bg-repeat after:bg-scroll after:bg-left-top after:bg-foreground after:h-[0.5px] after:transition-all after:duration-300 after:ease-out after:delay-0",
   {
     variants: {
       variant: {
-        default: "after:left-0 after:hover:w-full",
-        fromLeft: "after:left-0 after:hover:w-full",
-        fromRight: "after:right-0 after:hover:w-full",
-        fromMiddle: "after:left-1/2 after:hover:w-full after:hover:left-0",
+        default: "after:w-0 after:left-0 after:hover:w-full",
+        left: "after:w-0 after:left-0 after:hover:w-full",
+        right: "after:w-0 after:right-0 after:hover:w-full",
+        middle:
+          "after:w-0 after:left-1/2 after:hover:w-full after:hover:left-0",
+        leftReverse: "after:w-full after:left-0 after:hover:w-0",
+        rightReverse: "after:w-full after:right-0 after:hover:w-0",
+        middleReverse:
+          "after:w-full after:left-0 after:hover:w-0 after:hover:left-1/2",
       },
     },
     defaultVariants: {
@@ -43,15 +48,3 @@ const AnimatedUnderline = React.forwardRef<
 AnimatedUnderline.displayName = "AnimatedUnderline";
 
 export { AnimatedUnderline, animatedUnderlineVariants };
-
-// export default function AnimatedUnderline({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <div className="relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:block after:bg-none after:bg-repeat after:bg-scroll after:bg-left-top after:bg-foreground after:h-[0.5px] after:w-0 after:transition-all after:duration-300 after:ease-out after:delay-0 after:hover:w-full">
-//       {children}
-//     </div>
-//   );
-// }
