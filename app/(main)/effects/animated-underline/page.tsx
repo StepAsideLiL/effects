@@ -8,18 +8,30 @@ export default function AnimatedUnderlinePage() {
   return (
     <main>
       <ComponentContain className="gap-5">
-        <AnimatedUnderline className="text-2xl">
-          Animated Underline
+        <AnimatedUnderline className="text-lg">
+          Animated Underline Default
         </AnimatedUnderline>
-        <AnimatedUnderline className="text-2xl" variant={"fromRight"}>
-          Animated Underline
+        <AnimatedUnderline className="text-lg" variant={"left"}>
+          Animated Underline From Left
         </AnimatedUnderline>
-        <AnimatedUnderline className="text-2xl" variant={"fromMiddle"}>
-          Animated Underline
+        <AnimatedUnderline className="text-lg" variant={"leftReverse"}>
+          Animated Underline From Left Reverse
         </AnimatedUnderline>
-        <AnimatedUnderline className="text-2xl" variant={"fromMiddle"} asChild>
+        <AnimatedUnderline className="text-lg" variant={"right"}>
+          Animated Underline From Right
+        </AnimatedUnderline>
+        <AnimatedUnderline className="text-lg" variant={"rightReverse"}>
+          Animated Underline From Right Reverse
+        </AnimatedUnderline>
+        <AnimatedUnderline className="text-lg" variant={"middle"}>
+          Animated Underline From Middle
+        </AnimatedUnderline>
+        <AnimatedUnderline className="text-lg" variant={"middleReverse"}>
+          Animated Underline From Middle Reverse
+        </AnimatedUnderline>
+        <AnimatedUnderline className="text-lg" asChild>
           <Link href={`https://github.com/StepAsideLiL/effects`}>
-            Animated Underline
+            Animated Underline Link
           </Link>
         </AnimatedUnderline>
 
