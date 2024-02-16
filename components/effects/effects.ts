@@ -12,6 +12,12 @@ export const effects = [
     type: "style",
   },
   {
+    title: "Copy Text",
+    herf: "/effects/copy-text",
+    imgSrc: "",
+    type: "style",
+  },
+  {
     title: "Hacked Text",
     herf: "/effects/hacked-text",
     imgSrc: "",
