@@ -12,10 +12,12 @@ export default function CodeBlock({
   code,
   filename = "",
   hfit = true,
+  className,
 }: {
   code: string;
   filename?: string;
   hfit?: boolean;
+  className?: string;
 }) {
   const [copied, setCopied] = useState(false);
 
@@ -34,7 +36,7 @@ export default function CodeBlock({
   };
 
   return (
-    <div className="w-[512px] border rounded">
+    <div className={cn("w-[512px] border rounded", className)}>
       <div className="flex justify-between p-2">
         <code>{filename}</code>
 
