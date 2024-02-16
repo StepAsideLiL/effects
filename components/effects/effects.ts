@@ -6,6 +6,12 @@ export const effects = [
     type: "effect",
   },
   {
+    title: "Code Block",
+    herf: "/effects/code-block",
+    imgSrc: "",
+    type: "style",
+  },
+  {
     title: "Hacked Text",
     herf: "/effects/hacked-text",
     imgSrc: "",
