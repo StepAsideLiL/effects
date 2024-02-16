@@ -1,5 +1,3 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
-import Code from "@/components/uis/code";
 import {
   DocContain,
   DocDecscription,
@@ -9,12 +7,17 @@ import {
   DocTitle,
 } from "@/components/uis/docs-ui";
 import { promises as fs } from "fs";
+import CodeBlock from "@/components/effects/code-block/code-block";
 
 export default async function HackedTextDoc() {
   const file = await fs.readFile(
     process.cwd() + "/components/effects/hacked-text/hacked-text.tsx",
     "utf8"
   );
+
+  const usageImports = `import HackedText from "@/components/effects/hacked-text";`;
+
+  const usageComponents = `<HackedText className="text-9xl">Hacked Text</HackedText>`;
 
   return (
     <DocContain>
@@ -28,16 +31,33 @@ export default async function HackedTextDoc() {
 
       <DocSection>
         <DocSectionTitle>Required</DocSectionTitle>
-        <DocLink href="https://ui.shadcn.com/docs/installation/next">
-          Nextjs and Shadcn/ui
-        </DocLink>
+        <p>
+          Set up a{" "}
+          <DocLink href="https://ui.shadcn.com/docs/installation/next">
+            Nextjs and Shadcn/ui
+          </DocLink>{" "}
+          project CSS color variables
+        </p>
       </DocSection>
 
       <DocSection>
-        <DocSectionTitle>Code</DocSectionTitle>
-        <ScrollArea className="h-80">
-          <Code code={file} filename="hacked-text.tsx" />
-        </ScrollArea>
+        <DocSectionTitle>Component</DocSectionTitle>
+        <CodeBlock
+          code={file}
+          filename="hacked-text.tsx"
+          hfit={false}
+          className="w-full"
+        />
+      </DocSection>
+
+      <DocSection>
+        <DocSectionTitle>Usage</DocSectionTitle>
+        <CodeBlock code={usageImports} filename="page.tsx" className="w-full" />
+        <CodeBlock
+          code={usageComponents}
+          filename="page.tsx"
+          className="w-full"
+        />
       </DocSection>
     </DocContain>
   );
