@@ -39,13 +39,6 @@ export default async function HackedTextDoc() {
           <Code code={file} filename="hacked-text.tsx" />
         </ScrollArea>
       </DocSection>
-
-      <DocSection>
-        <DocSectionTitle>Inspired From</DocSectionTitle>
-        <DocLink href="https://youtu.be/W5oawMJaXbU?si=QrGQQkp-_mVBtn9a">
-          Hyperplexed Video
-        </DocLink>
-      </DocSection>
     </DocContain>
   );
 }
