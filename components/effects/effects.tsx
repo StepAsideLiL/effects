@@ -2,25 +2,29 @@ export const effects = [
   {
     title: "Animated Underline",
     herf: "/effects/animated-underline",
-    imgSrc: "",
+
     type: "effect",
+    tags: ["effect", "text", "underline"],
   },
   {
     title: "Code Block",
     herf: "/effects/code-block",
-    imgSrc: "",
+
     type: "style",
+    tags: ["style", "code"],
   },
   {
     title: "Copy Text",
     herf: "/effects/copy-text",
-    imgSrc: "",
+
     type: "style",
+    tags: ["style", "text", "copy"],
   },
   {
     title: "Hacked Text",
     herf: "/effects/hacked-text",
-    imgSrc: "",
+
     type: "effect",
+    tags: ["effect", "text"],
   },
 ];
