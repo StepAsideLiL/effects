@@ -1,5 +1,4 @@
 import HackedText from "@/components/effects/hacked-text/hacked-text";
-import { Main } from "@/components/uis/main";
 import { NextjsIcon, ShadcnIcon } from "@/components/uis/svg-icons";
 import { rubikMonoOne } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <Main>
+    <main className="container min-h-screen py-4 space-y-4">
       <section className="space-y-10 py-10">
         <h3 className="text-xl text-muted-foreground text-center">
           Embrace The Power Of Copy-Paste
@@ -37,6 +36,6 @@ export default function HomePage() {
           </Link>
         </section>
       </section>
-    </Main>
+    </main>
   );
 }
