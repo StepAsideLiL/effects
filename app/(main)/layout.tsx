@@ -1,4 +1,4 @@
-import EffectsNav from "@/components/templates/effects-nav";
+import EffectsNavbar from "@/components/templates/effects-navbar";
 import Footer from "@/components/templates/footer";
 
 export default function MainLayout({
@@ -8,7 +8,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <EffectsNav />
+      <EffectsNavbar />
 
       {children}
 
