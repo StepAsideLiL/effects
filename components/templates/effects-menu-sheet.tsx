@@ -14,9 +14,13 @@ import Link from "next/link";
 import { effects } from "@/components/effects/effects";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { Separator } from "@/components/ui/separator";
+import NavMenu from "@/components/templates/nav-menu";
+import { usePathname } from "next/navigation";
 
 export default function EffectsMenuSheet() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -33,11 +37,16 @@ export default function EffectsMenuSheet() {
 
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-10">
           <nav className="flex flex-col gap-2">
+            <NavMenu orientation="vertical" />
+            <Separator />
             {effects.map((list) => (
               <Link
                 key={list.herf}
                 href={list.herf}
-                className={cn("text-sm hover:underline")}
+                className={cn(
+                  "text-sm hover:underline",
+                  pathname === list.herf && "underline"
+                )}
                 onClick={() => setOpen(false)}
               >
                 {list.title}
