@@ -26,7 +26,7 @@ export default function CopyText({
   return (
     <div
       className={cn(
-        "font-mono flex justify-between items-center w-[512px] p-5 border rounded",
+        "font-mono flex justify-between items-center w-[512px] max-w-full p-5 border rounded",
         className
       )}
     >
