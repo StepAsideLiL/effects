@@ -13,6 +13,14 @@ const menus = [
     title: "Effects",
     href: "/effects",
   },
+  {
+    title: "Front pages",
+    href: "/front-pages",
+  },
+  {
+    title: "Designs",
+    href: "/designs",
+  },
 ];
 
 export default function NavMenu({
