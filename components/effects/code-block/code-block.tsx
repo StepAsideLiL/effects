@@ -36,7 +36,7 @@ export default function CodeBlock({
   };
 
   return (
-    <div className={cn("w-[512px] border rounded", className)}>
+    <div className={cn("w-[512px] max-w-full border rounded", className)}>
       <div className="flex justify-between p-2">
         <code>{filename}</code>
 
