@@ -15,7 +15,7 @@ export default function HomePage() {
     <Main>
       <section className="space-y-10 py-10">
         <h3 className="text-xl text-muted-foreground text-center">
-          Copy and paste component on your project
+          Embrace The Power Of Copy-Paste
         </h3>
         <HackedText
           className={cn(
