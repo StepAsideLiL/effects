@@ -15,11 +15,20 @@ const menus = [
   },
 ];
 
-export default function NavMenu() {
+export default function NavMenu({
+  orientation = "",
+}: {
+  orientation?: "" | "default" | "horizontal" | "vertical";
+}) {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-2">
+    <nav
+      className={cn(
+        orientation !== "vertical" && "flex items-center gap-2",
+        orientation === "vertical" && "flex flex-col"
+      )}
+    >
       {menus.map((list) => (
         <Link
           key={list.href}
