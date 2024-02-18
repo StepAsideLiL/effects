@@ -1,27 +1,9 @@
 "use client";
 
+import { menus } from "@/lib/menus";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const menus = [
-  {
-    title: "Docs",
-    href: "/docs",
-  },
-  {
-    title: "Effects",
-    href: "/effects",
-  },
-  {
-    title: "Front pages",
-    href: "/front-pages",
-  },
-  {
-    title: "Designs",
-    href: "/designs",
-  },
-];
 
 export default function NavMenu({
   orientation = "",
@@ -37,16 +19,16 @@ export default function NavMenu({
         orientation === "vertical" && "flex flex-col"
       )}
     >
-      {menus.map((list) => (
+      {menus.mainHeaderMenu.map((item) => (
         <Link
-          key={list.href}
-          href={list.href}
+          key={item.href}
+          href={item.href}
           className={cn(
             "text-muted-foreground hover:underline",
-            pathname === list.href && "text-foreground underline"
+            pathname === item.href && "text-foreground underline"
           )}
         >
-          {list.title}
+          {item.title}
         </Link>
       ))}
     </nav>

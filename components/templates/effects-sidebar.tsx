@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { effects } from "../effects/effects";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import NavMenu from "./nav-menu";
+import { menus } from "@/lib/menus";
 
 export default function EffectsSidebar() {
   return (
@@ -10,13 +10,13 @@ export default function EffectsSidebar() {
       <NavMenu orientation="vertical" />
       <Separator />
       <h1 className="text-lg font-semibold">Effects & Styles</h1>
-      {effects.map((list) => (
+      {menus.effectsList.map((item) => (
         <Link
-          key={list.href}
-          href={list.href}
+          key={item.href}
+          href={item.href}
           className={cn("text-muted-foreground text-sm hover:underline")}
         >
-          {list.title}
+          {item.title}
         </Link>
       ))}
     </nav>

@@ -11,12 +11,12 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Logo from "@/components/uis/logo";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { effects } from "@/components/effects/effects";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import NavMenu from "@/components/templates/nav-menu";
 import { usePathname } from "next/navigation";
+import { menus } from "@/lib/menus";
 
 export default function EffectsMenuSheet() {
   const [open, setOpen] = useState(false);
@@ -40,17 +40,17 @@ export default function EffectsMenuSheet() {
             <NavMenu orientation="vertical" />
             <Separator />
             <h1 className="text-lg font-semibold">Effects & Styles</h1>
-            {effects.map((list) => (
+            {menus.effectsList.map((item) => (
               <Link
-                key={list.href}
-                href={list.href}
+                key={item.href}
+                href={item.href}
                 className={cn(
                   "text-muted-foreground text-sm hover:underline",
-                  pathname === list.href && "text-foreground underline"
+                  pathname === item.href && "text-foreground underline"
                 )}
                 onClick={() => setOpen(false)}
               >
-                {list.title}
+                {item.title}
               </Link>
             ))}
           </nav>
