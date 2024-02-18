@@ -7,11 +7,11 @@ export default function EffectsAndStylesList() {
   return (
     <section className="grid grid-cols-4 gap-2">
       {effects.map((effect) => (
-        <Card key={effect.herf}>
+        <Card key={effect.href}>
           <CardHeader>
             <CardTitle className="text-center text-lg">
               <AnimatedUnderline asChild>
-                <Link href={effect.herf}>{effect.title}</Link>
+                <Link href={effect.href}>{effect.title}</Link>
               </AnimatedUnderline>
             </CardTitle>
           </CardHeader>

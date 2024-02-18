@@ -42,11 +42,11 @@ export default function EffectsMenuSheet() {
             <h1 className="text-lg font-semibold">Effects & Styles</h1>
             {effects.map((list) => (
               <Link
-                key={list.herf}
-                href={list.herf}
+                key={list.href}
+                href={list.href}
                 className={cn(
                   "text-muted-foreground text-sm hover:underline",
-                  pathname === list.herf && "text-foreground underline"
+                  pathname === list.href && "text-foreground underline"
                 )}
                 onClick={() => setOpen(false)}
               >
