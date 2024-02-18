@@ -3,6 +3,7 @@ import { ModeToggle } from "./mode-toggle";
 import Logo from "@/components/uis/logo";
 import NavMenu from "./nav-menu";
 import EffectsMenuSheet from "./effects-menu-sheet";
+import SearchCommandMenu from "./search-command-menu";
 
 export default function Navbar() {
   return (
@@ -17,7 +18,8 @@ export default function Navbar() {
         <EffectsMenuSheet />
       </div>
 
-      <div>
+      <div className="flex justify-between items-center gap-5">
+        <SearchCommandMenu />
         <ModeToggle />
       </div>
     </header>
