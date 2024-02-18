@@ -48,8 +48,7 @@ export default function SearchCommandMenu() {
       >
         <span>Search...</span>
         <span>
-          <span className="text-xs">⌘</span>{" "}
-          <span className="text-lg font-mono">K</span>
+          <span className="">⌘</span> <span className="font-mono">K</span>
         </span>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
