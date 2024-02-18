@@ -13,19 +13,22 @@ export default function HomePage() {
   return (
     <main className="container min-h-screen py-4 space-y-4">
       <section className="space-y-10 py-10">
-        <h3 className="text-xl text-muted-foreground text-center">
+        <h3 className="md:text-xl text-base text-muted-foreground text-center">
           Embrace The Power Of Copy-Paste
         </h3>
         <HackedText
           className={cn(
             rubikMonoOne.className,
-            "w-fit mx-auto text-center text-6xl"
+            "w-fit mx-auto lg:block hidden text-center text-6xl"
           )}
         >
           EFFECTS & STYLES
         </HackedText>
+        <h1 className={cn(rubikMonoOne.className, "text-center text-4xl")}>
+          EFFECTS & STYLES
+        </h1>
 
-        <p className="text-xl font-medium text-center">FOR</p>
+        <p className="md:text-xl text-lg font-medium text-center">FOR</p>
 
         <section className="flex justify-center items-center gap-10">
           <Link href={`https://nextjs.org/`} target="_blank">
