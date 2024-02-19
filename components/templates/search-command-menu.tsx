@@ -57,6 +57,15 @@ export default function SearchCommandMenu() {
           <CommandEmpty>No results found.</CommandEmpty>
 
           <CommandGroup heading="Menus">
+            <CommandItem
+              value={"Home"}
+              onSelect={() => {
+                runCommand(() => router.push("/" as string));
+              }}
+            >
+              <MenuSquare className="mr-2 h-4 w-4" />
+              <span>Home</span>
+            </CommandItem>
             {menus.mainHeaderMenu.map((item) => (
               <CommandItem
                 key={item.href}
