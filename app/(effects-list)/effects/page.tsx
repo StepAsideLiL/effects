@@ -1,4 +1,3 @@
-import { Main } from "@/components/uis/main";
 import EffectsAndStylesList from "./_parts/effects-styles";
 
 export default function EffectsPage() {
