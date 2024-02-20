@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import { Triangle } from "lucide-react";
 import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   const bannerCarouselCards = [
@@ -83,6 +84,40 @@ export default function Page() {
 
           <CarouselNext className="lg:absolute relative lg:left-[58%] -translate-x-1/2 left-1/2 lg:bottom-10 bottom-3" />
         </Carousel>
+      </section>
+
+      <section className="border-b border-b-primary">
+        <div className="py-20 container flex md:flex-row flex-col items-center">
+          <div className="w-full md:px-10 px-0 space-y-8">
+            <h1 className="text-3xl font-medium">
+              Building High Quality User Experience Is What Drive Us Toward Our
+              Goal
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              rerum reprehenderit voluptates, reiciendis cumque pariatur
+              laudantium sint beatae tenetur culpa?
+            </p>
+            <AnimatedUnderline variant={"leftReverse"}>
+              <Link href={""}>MORE INFORMATION</Link>
+            </AnimatedUnderline>
+          </div>
+
+          <Separator
+            orientation="vertical"
+            className="h-32 bg-primary md:block hidden"
+          />
+          <Separator className="my-10 bg-primary block md:hidden" />
+
+          <div className="w-full relative md:px-10 px-0">
+            <p className="sticky top-0">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+              iure sunt obcaecati iusto voluptates esse suscipit. Iusto non id
+              ad voluptatibus quidem. Vero eum minima voluptatibus quam deleniti
+              nobis architecto.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
