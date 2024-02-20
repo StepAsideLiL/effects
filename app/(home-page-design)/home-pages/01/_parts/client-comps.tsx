@@ -1,10 +1,11 @@
 "use client";
 
 import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function HeaderMenu() {
+export function HeaderMenu({ className }: { className?: string }) {
   const menus = [
     {
       title: "Home",
@@ -27,9 +28,13 @@ export function HeaderMenu() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-center items-center gap-5">
+    <nav className={cn("flex justify-center items-center gap-5", className)}>
       {menus.map((item, i) => (
-        <AnimatedUnderline key={i} asChild>
+        <AnimatedUnderline
+          key={i}
+          variant={item.href === pathname ? "active" : "default"}
+          asChild
+        >
           <Link href={``}>{item.title}</Link>
         </AnimatedUnderline>
       ))}
