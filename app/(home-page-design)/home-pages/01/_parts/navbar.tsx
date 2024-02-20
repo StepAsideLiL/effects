@@ -43,7 +43,7 @@ export default function Navbar() {
                   <img
                     src="https://images2.imgbox.com/8f/29/ghhMViPG_o.jpg"
                     alt="Company meeting"
-                    className="aspect-video"
+                    className="aspect-video grayscale"
                   />
                 </div>
                 <p>
