@@ -25,6 +25,10 @@ import Link from "next/link";`;
     Animated Underline Default
   </AnimatedUnderline>
 
+  <AnimatedUnderline className="text-lg" variant={"active"}>
+    Animated Underline Active
+  </AnimatedUnderline>
+
   <AnimatedUnderline className="text-lg" variant={"left"}>
     Animated Underline From Left
   </AnimatedUnderline>
