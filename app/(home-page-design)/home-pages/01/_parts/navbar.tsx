@@ -1,7 +1,12 @@
 import { Separator } from "@/components/ui/separator";
 import { Mail, Menu, Phone } from "lucide-react";
-import { HeaderMenu } from "./client-comps";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { HeaderMenu, MobileSideMenu } from "./client-comps";
+import {
+  Sheet,
+  InfoSheetContent,
+  SheetTrigger,
+  MobileSheetContent,
+} from "./ui/sheet";
 import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
 import Link from "next/link";
 import {
@@ -24,13 +29,13 @@ export default function Navbar() {
 
       <div className="w-full flex justify-end items-center">
         <Separator orientation="vertical" className="h-16 bg-primary" />
-        <div className="px-3">
+        <div className="lg:block hidden px-3">
           <Sheet>
             <SheetTrigger>
               <Menu className="stroke-2 hover:stroke-1 transition" />
             </SheetTrigger>
 
-            <SheetContent className="w-full lg:min-w-[512px] overflow-auto">
+            <InfoSheetContent className="lg:min-w-[512px] overflow-auto">
               <div className="pt-10 space-y-5">
                 <h1 className="text-2xl font-medium">About Us</h1>
                 <div className="aspect-video">
@@ -79,7 +84,20 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
-            </SheetContent>
+            </InfoSheetContent>
+          </Sheet>
+        </div>
+
+        <div className="block lg:hidden px-3">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="stroke-2 hover:stroke-1 transition" />
+            </SheetTrigger>
+
+            <MobileSheetContent className="lg:min-w-[512px] overflow-auto">
+              <div className="h-5"></div>
+              <MobileSideMenu />
+            </MobileSheetContent>
           </Sheet>
         </div>
       </div>
