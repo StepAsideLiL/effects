@@ -14,6 +14,7 @@ const animatedUnderlineVariants = cva(
         right: "after:w-0 after:right-0 after:hover:w-full",
         middle:
           "after:w-0 after:left-1/2 after:hover:w-full after:hover:left-0",
+        active: "after:w-full",
         leftReverse: "after:w-full after:left-0 after:hover:w-0",
         rightReverse: "after:w-full after:right-0 after:hover:w-0",
         middleReverse:
