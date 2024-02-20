@@ -23,7 +23,7 @@ export default function Navbar() {
         <span className="text-2xl font-black font-mono">Logo</span>
       </div>
 
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full hidden lg:flex justify-center items-center">
         <HeaderMenu />
       </div>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
               <Menu className="stroke-2 hover:stroke-1 transition" />
             </SheetTrigger>
 
-            <MobileSheetContent className="lg:min-w-[512px] overflow-auto">
+            <MobileSheetContent className="w-full overflow-auto">
               <div className="h-5"></div>
               <MobileSideMenu />
             </MobileSheetContent>
