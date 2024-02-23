@@ -116,6 +116,7 @@ export default function Page() {
           <BannerCarouselNext className="lg:absolute relative lg:left-[58%] -translate-x-1/2 left-1/2 lg:bottom-10 bottom-3" />
         </Carousel>
       </section>
+      {/* Banner ENd */}
 
       {/* 2nd section */}
       <section className="border-b border-b-primary">
@@ -151,6 +152,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* 2nd section End */}
 
       {/* 3rd section: Our Services */}
       <section className="container py-20 space-y-8">
@@ -200,6 +202,7 @@ export default function Page() {
           ))}
         </section>
       </section>
+      {/* 3rd section: Our Services End */}
     </main>
   );
 }
