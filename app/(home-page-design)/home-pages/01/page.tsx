@@ -207,7 +207,12 @@ export default function Page() {
 
       {/* 4nd section: Marquee */}
       <section className="border-y border-y-primary py-5">
-        <Marquee direction="right" autoFill pauseOnHover>
+        <Marquee
+          direction="right"
+          autoFill
+          pauseOnHover
+          className="overflow-hidden"
+        >
           {servicesCard.map((item, i) => (
             <span key={i} className="px-3 flex items-center gap-3">
               <span
