@@ -15,6 +15,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Marquee from "react-fast-marquee";
 
 export default function Page() {
   const bannerCarouselCards = [
@@ -203,6 +204,31 @@ export default function Page() {
         </section>
       </section>
       {/* 3rd section: Our Services End */}
+
+      {/* 4nd section: Marquee */}
+      <section className="border-y border-y-primary py-5">
+        <Marquee direction="right" autoFill pauseOnHover>
+          {servicesCard.map((item, i) => (
+            <span key={i} className="px-3 flex items-center gap-3">
+              <span
+                className="text-6xl hover:text-background transition"
+                style={{
+                  textShadow:
+                    "-1px -1px 0 hsl(var(--primary)), 1px -1px 0 hsl(var(--primary)), -1px 1px 0 hsl(var(--primary)), 1px 1px 0 hsl(var(--primary))",
+                }}
+              >
+                <Link href={item.href}>{item.title}</Link>
+              </span>
+              <Triangle
+                size={50}
+                strokeWidth={3}
+                className="rotate-90 text-primary/80"
+              />
+            </span>
+          ))}
+        </Marquee>
+      </section>
+      {/* 4nd section End */}
     </main>
   );
 }
