@@ -5,7 +5,13 @@ import {
   BannerCarouselNext,
 } from "./_parts/ui/carousel";
 import Link from "next/link";
-import { Globe, Network, TabletSmartphone, Triangle } from "lucide-react";
+import {
+  Globe,
+  MoveUp,
+  Network,
+  TabletSmartphone,
+  Triangle,
+} from "lucide-react";
 import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -234,6 +240,94 @@ export default function Page() {
         </Marquee>
       </section>
       {/* 4nd section End */}
+
+      {/* Our Projects */}
+      <section className="container py-20 space-y-8">
+        <section className="w-full flex justify-between items-center">
+          <div className="w-full">
+            <div className="flex lg:justify-start justify-center items-center gap-5">
+              <h1 className="text-4xl font-medium">OUR PROJECTS</h1>
+              <Triangle size={30} className="rotate-90 text-primary/80" />
+            </div>
+            <p className="text-muted-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+              esse quisquam! Reprehenderit iste mollitia laudantium?
+            </p>
+          </div>
+
+          <div className="w-full flex justify-end">
+            <AnimatedUnderline variant={"rightReverse"} asChild>
+              <Link href={""} className="tracking-wide">
+                VIEW ALL PROJECTS
+              </Link>
+            </AnimatedUnderline>
+          </div>
+        </section>
+
+        <section>
+          <section className="grid grid-cols-3 place-items-center gap-3">
+            <div className="relative group border border-foreground">
+              <div className="aspect-video overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images2.imgbox.com/dd/22/rVig2QJp_o.jpg"
+                  alt="image"
+                  className="w-full h-full object-cover transition group-hover:scale-105"
+                />
+              </div>
+              <div className="bg-secondary/30 absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+                <div className="h-full grid place-content-center gap-5">
+                  <h1 className="text-3xl font-medium">Content Management</h1>
+                  <Link
+                    href={""}
+                    className="w-fit p-3 inline-block border border-foreground rounded-full"
+                  >
+                    <MoveUp className="rotate-45" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group border border-foreground">
+              <div className="aspect-video overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images2.imgbox.com/d5/3d/QwBQ9gfN_o.jpg"
+                  alt="image"
+                  className="w-full h-full object-cover transition group-hover:scale-105"
+                />
+              </div>
+              <div className="bg-secondary/30 absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+                <div className="h-full grid place-content-center gap-5">
+                  <h1 className="text-3xl font-medium">Design Backend</h1>
+                  <Link
+                    href={""}
+                    className="w-fit p-3 inline-block border border-foreground rounded-full"
+                  >
+                    <MoveUp className="rotate-45" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h1 className="uppercase text-3xl font-medium">
+                Full Infrastructure
+              </h1>
+              <p className="text-muted-foreground pb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
+                quaerat.
+              </p>
+              <AnimatedUnderline variant={"leftReverse"} asChild>
+                <Link href={""} className="inline-block">
+                  KNOW MORE
+                </Link>
+              </AnimatedUnderline>
+            </div>
+          </section>
+        </section>
+      </section>
+      {/* Our Projects End */}
     </main>
   );
 }
