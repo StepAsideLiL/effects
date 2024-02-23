@@ -11,6 +11,7 @@ import {
   Network,
   TabletSmartphone,
   Triangle,
+  User,
 } from "lucide-react";
 import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
 import { Separator } from "@/components/ui/separator";
@@ -22,6 +23,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Marquee from "react-fast-marquee";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   const bannerCarouselCards = [
@@ -72,6 +74,29 @@ export default function Page() {
       desciption:
         "ea animi repellat, asperiores sapiente facere odio exercitationem tenetur dolor numquam, suscipit et? Saepe sint cumque beatae ab ipsam non accusamus molestiae nobis quas, repellat aut, dolorequam itaque maiores hic sit tempora pariatur.",
       href: "",
+    },
+  ];
+
+  const projectInfo = [
+    {
+      title: "Clients",
+      amount: "140",
+      icon: <User strokeWidth={1} className="size-20" />,
+    },
+    {
+      title: "CMS",
+      amount: "230",
+      icon: <User strokeWidth={1} className="size-20" />,
+    },
+    {
+      title: "Clients",
+      amount: "140",
+      icon: <User strokeWidth={1} className="size-20" />,
+    },
+    {
+      title: "Clients",
+      amount: "140",
+      icon: <User strokeWidth={1} className="size-20" />,
     },
   ];
 
@@ -328,6 +353,47 @@ export default function Page() {
         </section>
       </section>
       {/* Our Projects End */}
+
+      {/* Branding Section */}
+      <section className="container py-20 space-y-8">
+        <h1 className="text-5xl font-semibold text-center">
+          Our Brand Create The Best Backend For Our Partner. The Supirior CMS &
+          Backend Coupled With The Best Design This World Has To Offer For Web &
+          Mobile Application
+        </h1>
+
+        <p className="text-center text-muted-foreground">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi
+          architecto pariatur perferendis corrupti. Nisi ipsa dolorem autem
+          delectus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Molestias ullam ab eos. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Deleniti commodi delectus iste voluptas quisquam
+          mollitia incidunt hic necessitatibus vitae ipsa.
+        </p>
+
+        <div className="flex flex-wrap justify-between items-center gap-3">
+          {projectInfo.map((item, i) => (
+            <div key={i} className="flex justify-between items-center gap-5">
+              <div className="p-3 border border-foreground rounded-full">
+                {item.icon}
+              </div>
+              <div>
+                <h1 className="font-medium uppercase">{item.title}</h1>
+                <p className="text-3xl font-medium">{item.amount}+</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button size={"lg"} asChild>
+            <Link href={""} className="uppercase">
+              Explore More
+            </Link>
+          </Button>
+        </div>
+      </section>
+      {/* Branding Section End */}
     </main>
   );
 }
