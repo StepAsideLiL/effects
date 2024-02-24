@@ -48,7 +48,7 @@ export default function Page() {
       title: "Number One Service",
       subtitle: "Latest Tech",
       description:
-        "aut ullam numquam vitae eum. eos. Voluptatum itaque quod minima iure earum temporibus beatae similique ea animi repellat, asperiores sapiente facere odio exercitationem tenetur dolor numquam, suscipit et? Saepe sint cumque beatae ab ipsam non accusamus molestiae nobis quas, repellat aut, dolorequam itaque maiores hic sit tempora pariatur, officiis veniam accusamus. Doloribus dolorum, ab aspernatur suscipit quis labore nemo accusamus commodi amet?",
+        "aut ullam numquam vitae eum. eos. Voluptatum itaque quod minima iure earum temporibus beatae similique ea animi repellat, asperiores sapiente facere odio exercitationem tenetur dolor numquam, suscipit et? Saepeis labore nemo accusamus commodi amet?",
       href: "",
       imgSrc: "https://images2.imgbox.com/83/69/Lwpcunua_o.jpg",
     },
@@ -104,7 +104,7 @@ export default function Page() {
   return (
     <main className="min-h-screen">
       {/* Banner */}
-      <section className="border-b border-b-primary">
+      <section className="border-b border-b-primary lg:py-0 py-5">
         <Carousel opts={{ loop: true }}>
           <CarouselContent>
             {bannerCarouselCards.map((item, i) => (
@@ -119,7 +119,7 @@ export default function Page() {
                       {item.subtitle}
                     </h3>
                   </div>
-                  <h1 className="text-7xl font-bold pb-10 lg:text-left text-center">
+                  <h1 className="lg:text-7xl text-4xl font-bold pb-10 lg:text-left text-center">
                     {item.title}
                   </h1>
                   <p className="text-muted-foreground pb-10 lg:text-left text-center">
@@ -127,7 +127,9 @@ export default function Page() {
                   </p>
                   <div className="flex lg:justify-start justify-center pb-5">
                     <AnimatedUnderline>
-                      <Link href={item.href}>MORE INFORMATION</Link>
+                      <Link href={item.href} className="text-sm">
+                        MORE INFORMATION
+                      </Link>
                     </AnimatedUnderline>
                   </div>
                 </div>
@@ -155,17 +157,19 @@ export default function Page() {
       <section className="border-b border-b-primary">
         <div className="py-20 container flex md:flex-row flex-col items-center">
           <div className="w-full md:px-10 px-0 space-y-8">
-            <h1 className="text-3xl font-medium">
+            <h1 className="text-3xl font-semibold uppercase">
               Building High Quality User Experience Is What Drive Us Toward Our
               Goal
             </h1>
-            <p>
+            <p className="text-muted-foreground">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
               rerum reprehenderit voluptates, reiciendis cumque pariatur
               laudantium sint beatae tenetur culpa?
             </p>
             <AnimatedUnderline variant={"leftReverse"}>
-              <Link href={""}>MORE INFORMATION</Link>
+              <Link href={""} className="text-sm">
+                MORE INFORMATION
+              </Link>
             </AnimatedUnderline>
           </div>
 
@@ -189,28 +193,28 @@ export default function Page() {
 
       {/* 3rd section: Our Services */}
       <section className="container py-20 space-y-8">
-        <section className="w-full flex justify-between items-center">
-          <div className="w-full">
-            <div className="flex lg:justify-start justify-center items-center gap-5">
-              <h1 className="text-4xl font-medium">OUR SERVICES</h1>
+        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+          <div className="w-full space-y-2">
+            <div className="flex gap-5">
               <Triangle size={30} className="rotate-90 text-primary/80" />
+              <h1 className="lg:text-4xl text-2xl font-medium">OUR SERVICES</h1>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground lg:text-base text-sm">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex justify-end">
+          <div className="w-full flex lg:justify-end justify-start">
             <AnimatedUnderline variant={"rightReverse"} asChild>
-              <Link href={""} className="tracking-wide">
+              <Link href={""} className="text-sm">
                 VIEW ALL SERVICES
               </Link>
             </AnimatedUnderline>
           </div>
         </section>
 
-        <section className="grid grid-cols-3 gap-2">
+        <section className="grid lg:grid-cols-3 grid-cols-1 gap-2">
           {servicesCard.map((item, i) => (
             <Card key={i}>
               <CardHeader>
@@ -226,7 +230,7 @@ export default function Page() {
                   asChild
                   className="after:bg-background"
                 >
-                  <Link href={""} className="tracking-wide">
+                  <Link href={""} className="text-sm">
                     MORE DETAILS
                   </Link>
                 </AnimatedUnderline>
@@ -248,7 +252,7 @@ export default function Page() {
           {servicesCard.map((item, i) => (
             <span key={i} className="px-3 flex items-center gap-3">
               <span
-                className="text-6xl hover:text-background transition"
+                className="lg:text-6xl text-2xl hover:text-background transition"
                 style={{
                   textShadow:
                     "-1px -1px 0 hsl(var(--primary)), 1px -1px 0 hsl(var(--primary)), -1px 1px 0 hsl(var(--primary)), 1px 1px 0 hsl(var(--primary))",
@@ -257,33 +261,32 @@ export default function Page() {
                 <Link href={item.href}>{item.title}</Link>
               </span>
               <Triangle
-                size={50}
                 strokeWidth={3}
-                className="rotate-90 text-primary/80"
+                className="lg:size-12 size-6 rotate-90 text-primary/80"
               />
             </span>
           ))}
         </Marquee>
       </section>
-      {/* 4nd section End */}
+      {/* 4nd section: Marquee End */}
 
       {/* Our Projects */}
       <section className="container py-20 space-y-8">
-        <section className="w-full flex justify-between items-center">
-          <div className="w-full">
-            <div className="flex lg:justify-start justify-center items-center gap-5">
-              <h1 className="text-4xl font-medium">OUR PROJECTS</h1>
+        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+          <div className="w-full space-y-2">
+            <div className="flex gap-5">
               <Triangle size={30} className="rotate-90 text-primary/80" />
+              <h1 className="lg:text-4xl text-2xl font-medium">OUR PROJECTS</h1>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground lg:text-base text-sm">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex justify-end">
+          <div className="w-full flex lg:justify-end justify-start">
             <AnimatedUnderline variant={"rightReverse"} asChild>
-              <Link href={""} className="tracking-wide">
+              <Link href={""} className="text-sm">
                 VIEW ALL PROJECTS
               </Link>
             </AnimatedUnderline>
@@ -291,7 +294,7 @@ export default function Page() {
         </section>
 
         <section>
-          <section className="grid grid-cols-3 place-items-center gap-3">
+          <section className="grid lg:grid-cols-3 grid-cols-1 place-items-center gap-3">
             <div className="relative group border border-foreground">
               <div className="aspect-video overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -301,7 +304,7 @@ export default function Page() {
                   className="w-full h-full object-cover transition group-hover:scale-105"
                 />
               </div>
-              <div className="bg-secondary/30 absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+              <div className="bg-secondary/30 absolute inset-0 lg:opacity-0 opacity-100 group-hover:opacity-100 transition">
                 <div className="h-full grid place-content-center gap-5">
                   <h1 className="text-3xl font-medium">Content Management</h1>
                   <Link
@@ -323,7 +326,7 @@ export default function Page() {
                   className="w-full h-full object-cover transition group-hover:scale-105"
                 />
               </div>
-              <div className="bg-secondary/30 absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+              <div className="bg-secondary/30 absolute inset-0 lg:opacity-0 opacity-100 group-hover:opacity-100 transition">
                 <div className="h-full grid place-content-center gap-5">
                   <h1 className="text-3xl font-medium">Design Backend</h1>
                   <Link
@@ -357,13 +360,13 @@ export default function Page() {
 
       {/* Branding Section */}
       <section className="container py-20 space-y-8">
-        <h1 className="text-5xl font-semibold text-center">
+        <h1 className="lg:text-5xl text-2xl font-semibold text-center">
           Our Brand Create The Best Backend For Our Partner. The Supirior CMS &
           Backend Coupled With The Best Design This World Has To Offer For Web &
           Mobile Application
         </h1>
 
-        <p className="text-center text-muted-foreground">
+        <p className="lg:text-base text-sm text-center text-muted-foreground">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi
           architecto pariatur perferendis corrupti. Nisi ipsa dolorem autem
           delectus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -398,21 +401,23 @@ export default function Page() {
 
       {/* Awards Section */}
       <section className="container py-20 space-y-8">
-        <section className="w-full flex justify-between items-center">
-          <div className="w-full">
-            <div className="flex lg:justify-start justify-center items-center gap-5">
-              <h1 className="text-4xl font-medium uppercase">Our Awards</h1>
+        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+          <div className="w-full space-y-2">
+            <div className="flex gap-5">
               <Triangle size={30} className="rotate-90 text-primary/80" />
+              <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+                OUR Awards
+              </h1>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground lg:text-base text-sm">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex justify-end">
+          <div className="w-full flex lg:justify-end justify-start">
             <AnimatedUnderline variant={"rightReverse"} asChild>
-              <Link href={""} className="tracking-wide uppercase">
+              <Link href={""} className="text-sm">
                 VIEW ALL AWARDS
               </Link>
             </AnimatedUnderline>
