@@ -142,9 +142,9 @@ export function AwardSection() {
               <div className="size-10 md:block hidden">
                 {item.id === selectedTab.id && (
                   <motion.div
-                    initial={{ x: 10, opacity: 0 }}
+                    initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.2, ease: "easeIn" }}
                   >
                     <Triangle size={36} className="rotate-90" />
                   </motion.div>
