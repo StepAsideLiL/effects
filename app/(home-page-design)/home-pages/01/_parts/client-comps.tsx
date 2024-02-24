@@ -117,7 +117,7 @@ export function AwardSection() {
               initial={{ rotate: 45, scale: 0 }}
               animate={{ rotate: 0, scale: 1 }}
               exit={{ rotate: 45, scale: 0 }}
-              transition={{ duration: 0.1 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
               className="relative aspect-square"
             >
               <div className="w-full h-full bg-foreground"></div>
