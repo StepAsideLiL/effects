@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/card";
 import Marquee from "react-fast-marquee";
 import { Button } from "@/components/ui/button";
+import { AwardSection } from "./_parts/client-comps";
 
 export default function Page() {
   const bannerCarouselCards = [
@@ -394,6 +395,33 @@ export default function Page() {
         </div>
       </section>
       {/* Branding Section End */}
+
+      {/* Awards Section */}
+      <section className="container py-20 space-y-8">
+        <section className="w-full flex justify-between items-center">
+          <div className="w-full">
+            <div className="flex lg:justify-start justify-center items-center gap-5">
+              <h1 className="text-4xl font-medium uppercase">Our Awards</h1>
+              <Triangle size={30} className="rotate-90 text-primary/80" />
+            </div>
+            <p className="text-muted-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+              esse quisquam! Reprehenderit iste mollitia laudantium?
+            </p>
+          </div>
+
+          <div className="w-full flex justify-end">
+            <AnimatedUnderline variant={"rightReverse"} asChild>
+              <Link href={""} className="tracking-wide uppercase">
+                VIEW ALL AWARDS
+              </Link>
+            </AnimatedUnderline>
+          </div>
+        </section>
+
+        <AwardSection />
+      </section>
+      {/* Awards Section End */}
     </main>
   );
 }

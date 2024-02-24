@@ -4,6 +4,9 @@ import { AnimatedUnderline } from "@/components/effects/animated-underline/anima
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { Triangle } from "lucide-react";
 
 const menus = [
   {
@@ -60,5 +63,108 @@ export function MobileSideMenu() {
         </Link>
       ))}
     </nav>
+  );
+}
+
+export function AwardSection() {
+  const tabs = [
+    {
+      id: "1",
+      title: "Best Application Award",
+      year: "2018",
+      image: "/images/trophy-1.jpg",
+    },
+    {
+      id: "2",
+      title: "Supirior CMS Award",
+      year: "2019",
+      image: "/images/trophy-2.jpg",
+    },
+    {
+      id: "3",
+      title: "Awesome Design Award",
+      year: "2022",
+      image: "/images/trophy-3.jpg",
+    },
+    {
+      id: "4",
+      title: "Best Application Award",
+      year: "2018",
+      image: "/images/trophy-1.jpg",
+    },
+    {
+      id: "5",
+      title: "Supirior CMS Award",
+      year: "2019",
+      image: "/images/trophy-2.jpg",
+    },
+    {
+      id: "6",
+      title: "Awesome Design Award",
+      year: "2022",
+      image: "/images/trophy-3.jpg",
+    },
+  ];
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
+  return (
+    <section className="border border-foreground">
+      <div className="flex gap-10 items-center">
+        <div className="w-96 p-10">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedTab ? selectedTab.image : "empty"}
+              initial={{ rotate: 45, scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              exit={{ rotate: 45, scale: 0 }}
+              transition={{ duration: 0.1 }}
+              className="relative aspect-square"
+            >
+              <div className="w-full h-full bg-foreground"></div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={selectedTab.image}
+                alt="image"
+                className="absolute inset-0 w-full h-full object-cover -rotate-12"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="flex-1 flex flex-col justify-center py-4 divide-y divide-foreground">
+          {tabs.map((item, i) => (
+            <div
+              key={i}
+              className="pl-10 relative p-2 flex items-center gap-4 select-none cursor-pointer"
+              onClick={() => setSelectedTab(item)}
+              onMouseEnter={() => setSelectedTab(item)}
+            >
+              <div className="size-10 md:block hidden">
+                {item.id === selectedTab.id && (
+                  <motion.div
+                    initial={{ x: 10, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Triangle size={36} className="rotate-90" />
+                  </motion.div>
+                )}
+              </div>
+              <h1 className="md:block hidden lg:text-2xl text-lg flex-1">
+                {item.title}
+              </h1>
+              <p>{item.year}</p>
+              {item.id === selectedTab.id && (
+                <motion.div
+                  className="absolute -left-px top-0 bottom-0 bg-background w-px h-full z-10"
+                  layoutId="sideline"
+                />
+              )}
+              <div className="absolute -left-px top-0 bottom-0 bg-foreground w-px h-full" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
