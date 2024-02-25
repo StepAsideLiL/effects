@@ -34,7 +34,7 @@ export default function Page() {
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dicta quo velit cumque fuga, porro facilis magni neque quam voluptas corporis odio quidem, unde ratione aut ullam numquam vitae eum.",
       href: "",
-      imgSrc: "https://images2.imgbox.com/4e/cf/Fg94AaYt_o.jpg",
+      imgSrc: "/images/banner-1.jpg",
     },
     {
       title: "Smooth User Experience",
@@ -42,7 +42,7 @@ export default function Page() {
       description:
         "Et dicta quo velit cumque fuga, porro facilis magni neque quam voluptas corporis odio quidem, Lorem ipsum dolor sit, amet consectetur adipisicing elit. unde ratione aut ullam numquam vitae eum. Voluptatum itaque quod minima iure earum temporibus beatae similique ea veniam accusamus. Doloribus dolorum, ab aspernatur suscipit quis labore nemo accusamus commodi amet?",
       href: "",
-      imgSrc: "https://images2.imgbox.com/52/fb/qQEr1HGg_o.jpg",
+      imgSrc: "/images/banner-1.jpg",
     },
     {
       title: "Number One Service",
@@ -50,7 +50,7 @@ export default function Page() {
       description:
         "aut ullam numquam vitae eum. eos. Voluptatum itaque quod minima iure earum temporibus beatae similique ea animi repellat, asperiores sapiente facere odio exercitationem tenetur dolor numquam, suscipit et? Saepeis labore nemo accusamus commodi amet?",
       href: "",
-      imgSrc: "https://images2.imgbox.com/83/69/Lwpcunua_o.jpg",
+      imgSrc: "/images/banner-1.jpg",
     },
   ];
 
