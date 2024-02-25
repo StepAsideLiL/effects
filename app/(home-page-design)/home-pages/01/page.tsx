@@ -299,10 +299,11 @@ export default function Page() {
           <section className="grid lg:grid-cols-3 grid-cols-1 place-items-center gap-3">
             <div className="relative group border border-foreground">
               <div className="aspect-video overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images2.imgbox.com/dd/22/rVig2QJp_o.jpg"
-                  alt="image"
+                <Image
+                  src={"/images/project-1.jpg"}
+                  alt="Banner Image"
+                  width={1000}
+                  height={1000}
                   className="w-full h-full object-cover transition group-hover:scale-105"
                 />
               </div>
@@ -321,10 +322,11 @@ export default function Page() {
 
             <div className="relative group border border-foreground">
               <div className="aspect-video overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images2.imgbox.com/d5/3d/QwBQ9gfN_o.jpg"
-                  alt="image"
+                <Image
+                  src={"/images/project-2.jpg"}
+                  alt="Banner Image"
+                  width={1000}
+                  height={1000}
                   className="w-full h-full object-cover transition group-hover:scale-105"
                 />
               </div>
