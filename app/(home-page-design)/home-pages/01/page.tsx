@@ -25,6 +25,7 @@ import {
 import Marquee from "react-fast-marquee";
 import { Button } from "@/components/ui/button";
 import { AwardSection } from "./_parts/client-comps";
+import Image from "next/image";
 
 export default function Page() {
   const bannerCarouselCards = [
@@ -42,7 +43,7 @@ export default function Page() {
       description:
         "Et dicta quo velit cumque fuga, porro facilis magni neque quam voluptas corporis odio quidem, Lorem ipsum dolor sit, amet consectetur adipisicing elit. unde ratione aut ullam numquam vitae eum. Voluptatum itaque quod minima iure earum temporibus beatae similique ea veniam accusamus. Doloribus dolorum, ab aspernatur suscipit quis labore nemo accusamus commodi amet?",
       href: "",
-      imgSrc: "/images/banner-1.jpg",
+      imgSrc: "/images/banner-2.jpg",
     },
     {
       title: "Number One Service",
@@ -50,7 +51,7 @@ export default function Page() {
       description:
         "aut ullam numquam vitae eum. eos. Voluptatum itaque quod minima iure earum temporibus beatae similique ea animi repellat, asperiores sapiente facere odio exercitationem tenetur dolor numquam, suscipit et? Saepeis labore nemo accusamus commodi amet?",
       href: "",
-      imgSrc: "/images/banner-1.jpg",
+      imgSrc: "/images/banner-3.jpg",
     },
   ];
 
@@ -136,10 +137,11 @@ export default function Page() {
 
                 <div className="w-5/12 lg:block hidden">
                   <div className="w-full h-[650px]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={item.imgSrc}
                       alt="Banner Image"
+                      width={1000}
+                      height={1000}
                       className="w-full h-full object-cover grayscale"
                     />
                   </div>
