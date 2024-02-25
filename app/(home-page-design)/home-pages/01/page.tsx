@@ -83,22 +83,22 @@ export default function Page() {
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="size-20" />,
+      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
     },
     {
       title: "CMS",
       amount: "230",
-      icon: <User strokeWidth={1} className="size-20" />,
+      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
     },
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="size-20" />,
+      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
     },
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="size-20" />,
+      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
     },
   ];
 
@@ -386,8 +386,12 @@ export default function Page() {
                 {item.icon}
               </div>
               <div>
-                <h1 className="font-medium uppercase">{item.title}</h1>
-                <p className="text-3xl font-medium">{item.amount}+</p>
+                <h1 className="font-medium uppercase lg:text-base text-xs">
+                  {item.title}
+                </h1>
+                <p className="lg:text-3xl text-2xl font-medium">
+                  {item.amount}+
+                </p>
               </div>
             </div>
           ))}
