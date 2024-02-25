@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Triangle } from "lucide-react";
+import Image from "next/image";
 
 const menus = [
   {
@@ -110,7 +111,7 @@ export function AwardSection() {
   return (
     <section className="border border-foreground">
       <div className="flex gap-10 items-center">
-        <div className="w-96 p-10">
+        <div className="lg:w-[612px] w-96 lg:p-20 p-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedTab ? selectedTab.image : "empty"}
@@ -121,10 +122,11 @@ export function AwardSection() {
               className="relative aspect-square"
             >
               <div className="w-full h-full bg-foreground"></div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={selectedTab.image}
-                alt="image"
+                alt="Banner Image"
+                width={1000}
+                height={1000}
                 className="absolute inset-0 w-full h-full object-cover -rotate-12"
               />
             </motion.div>
@@ -135,7 +137,7 @@ export function AwardSection() {
           {tabs.map((item, i) => (
             <div
               key={i}
-              className="pl-10 relative p-2 flex items-center gap-4 select-none cursor-pointer"
+              className="pl-10 relative p-5 flex items-center gap-4 select-none cursor-pointer"
               onClick={() => setSelectedTab(item)}
               onMouseEnter={() => setSelectedTab(item)}
             >
