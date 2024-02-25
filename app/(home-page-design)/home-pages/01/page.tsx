@@ -427,6 +427,29 @@ export default function Page() {
         <AwardSection />
       </section>
       {/* Awards Section End */}
+
+      {/* Create Section */}
+      <section className="container py-20 space-y-8">
+        <section className="w-full space-y-2">
+          <div className="flex gap-5">
+            <Triangle size={30} className="rotate-90 text-primary/80" />
+            <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+              We Create For You
+            </h1>
+          </div>
+          <p className="text-muted-foreground lg:text-base text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            esse quisquam! Reprehenderit iste mollitia laudantium?
+          </p>
+        </section>
+
+        <section>
+          <section></section>
+
+          <section></section>
+        </section>
+      </section>
+      {/* Create Section End */}
     </main>
   );
 }
