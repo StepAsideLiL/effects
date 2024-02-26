@@ -596,7 +596,7 @@ export default function Page() {
           </h1>
         </div>
 
-        <section className="grid grid-cols-3 gap-3">
+        <section className="grid lg:grid-cols-3 grid-cols-1 gap-3">
           {testimonals.map((item, i) => (
             <Card key={i}>
               <CardContent className="pt-6 first-letter:text-2xl first-letter:font-bold">
@@ -612,6 +612,27 @@ export default function Page() {
         </section>
       </section>
       {/* Testimonal End */}
+
+      {/* Get In Touch */}
+      <section className="container bg-green-300 text-background">
+        <section className="w-full p-10 flex lg:flex-row flex-col justify-between lg:items-end items-start gap-3">
+          <section className="max-w-4xl space-y-6">
+            <p>Connect With Us</p>
+            <h1 className="lg:text-4xl text-2xl font-bold uppercase">
+              We Will Create A Solution Just For You and Your Business
+            </h1>
+          </section>
+
+          <section className="flex-shrink-0">
+            <AnimatedUnderline variant={"leftReverse"}>
+              <Link href={""} className="text-sm uppercase">
+                Get In Touch
+              </Link>
+            </AnimatedUnderline>
+          </section>
+        </section>
+      </section>
+      {/* Get In Touch End */}
     </main>
   );
 }
