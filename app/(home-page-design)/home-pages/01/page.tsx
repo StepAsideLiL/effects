@@ -19,6 +19,7 @@ import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -117,6 +118,24 @@ export default function Page() {
     },
   ];
 
+  const testimonals = [
+    {
+      name: "Ropa Rich",
+      job: "Entrepreneur",
+      body: "Our experience with the backend service was exceptional. It streamlined our operations, offering seamless data management and robust functionality. Highly recommended for any business seeking efficiency and reliability in their backend infrastructure.",
+    },
+    {
+      name: "Pochita Woff",
+      job: "Project Manager",
+      body: "Our collaboration with the web design team surpassed all expectations. Their innovative approach and attention to detail resulted in a visually stunning and user-friendly website. A testament to their expertise and dedication to crafting exceptional digital experiences.",
+    },
+    {
+      name: "Denji Kun",
+      job: "Web Developer",
+      body: "The CMS solution provided unparalleled ease of content management, empowering our team to effortlessly update and maintain our website. Its intuitive interface and customizable features tailored perfectly to our needs, making content creation a breeze. A game-changer for streamlining our online presence.",
+    },
+  ];
+
   return (
     <main className="min-h-screen">
       {/* Banner */}
@@ -130,7 +149,7 @@ export default function Page() {
               >
                 <div className="lg:w-7/12 w-full px-20">
                   <div className="flex lg:justify-start justify-center items-center gap-5 pb-4">
-                    <Triangle size={30} className="rotate-90 text-primary/80" />
+                    <Triangle size={40} className="rotate-90 text-primary/80" />
                     <h3 className="text-muted-foreground text-lg lg:text-left text-center">
                       {item.subtitle}
                     </h3>
@@ -213,7 +232,7 @@ export default function Page() {
         <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
-              <Triangle size={30} className="rotate-90 text-primary/80" />
+              <Triangle size={40} className="rotate-90 text-primary/80" />
               <h1 className="lg:text-4xl text-2xl font-medium">OUR SERVICES</h1>
             </div>
             <p className="text-muted-foreground lg:text-base text-sm">
@@ -292,7 +311,7 @@ export default function Page() {
         <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
-              <Triangle size={30} className="rotate-90 text-primary/80" />
+              <Triangle size={40} className="rotate-90 text-primary/80" />
               <h1 className="lg:text-4xl text-2xl font-medium">OUR PROJECTS</h1>
             </div>
             <p className="text-muted-foreground lg:text-base text-sm">
@@ -427,7 +446,7 @@ export default function Page() {
         <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
-              <Triangle size={30} className="rotate-90 text-primary/80" />
+              <Triangle size={40} className="rotate-90 text-primary/80" />
               <h1 className="lg:text-4xl text-2xl font-medium uppercase">
                 OUR Awards
               </h1>
@@ -455,7 +474,7 @@ export default function Page() {
       <section className="container py-20 space-y-8">
         <section className="w-full space-y-2">
           <div className="flex gap-5">
-            <Triangle size={30} className="rotate-90 text-primary/80" />
+            <Triangle size={40} className="rotate-90 text-primary/80" />
             <h1 className="lg:text-4xl text-2xl font-medium uppercase">
               We Create For You
             </h1>
@@ -567,6 +586,32 @@ export default function Page() {
         </section>
       </section>
       {/* Inspiration Video End */}
+
+      {/* Testimonal */}
+      <section className="container pt-40 pb-20 space-y-9">
+        <div className="flex gap-5 justify-center">
+          <Triangle size={40} className="rotate-90 text-primary/80" />
+          <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+            Testimonal
+          </h1>
+        </div>
+
+        <section className="grid grid-cols-3 gap-3">
+          {testimonals.map((item, i) => (
+            <Card key={i}>
+              <CardContent className="pt-6 first-letter:text-2xl first-letter:font-bold">
+                {item.body}
+              </CardContent>
+
+              <CardHeader className="pt-0 text-right">
+                <CardTitle className="text-base">{item.name}</CardTitle>
+                <CardDescription>{item.job}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </section>
+      </section>
+      {/* Testimonal End */}
     </main>
   );
 }
