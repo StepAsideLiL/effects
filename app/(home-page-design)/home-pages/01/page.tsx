@@ -9,6 +9,7 @@ import {
   Globe,
   MoveUp,
   Network,
+  Play,
   TabletSmartphone,
   Triangle,
   User,
@@ -28,9 +29,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./_parts/ui/accordion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./_parts/ui/dialog";
 import Marquee from "react-fast-marquee";
 import { Button } from "@/components/ui/button";
-import { AwardSection } from "./_parts/client-comps";
+import { AwardSection, VideoPlayer } from "./_parts/client-comps";
 import Image from "next/image";
 
 export default function Page() {
@@ -522,6 +531,42 @@ export default function Page() {
         </section>
       </section>
       {/* Create Section End */}
+
+      {/* Inspiration Video */}
+      <section className="border-y border-y-foreground">
+        <section className="px-10 max-w-7xl mx-auto py-20 flex lg:flex-row flex-col gap-10">
+          <section className="w-full space-y-8">
+            <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+              Watching This Well Make Video Will clear All Your Worries
+            </h1>
+            <AnimatedUnderline variant={"leftReverse"}>
+              <Link href={""} className="text-sm uppercase">
+                Get In Touch
+              </Link>
+            </AnimatedUnderline>
+          </section>
+
+          <section className="relative w-full">
+            <Dialog>
+              <DialogTrigger className="absolute z-30 top-10 left-10 border border-foreground p-10 rounded-full hover:scale-95 transition">
+                <Play className="size-20 text-white" />
+              </DialogTrigger>
+              <DialogContent className="p-10 max-w-3xl w-fit mx-auto">
+                <VideoPlayer />
+              </DialogContent>
+            </Dialog>
+
+            <Image
+              src={"/images/banner-2.jpg"}
+              alt="image"
+              width={1000}
+              height={1000}
+              className="lg:absolute relative aspect-video object-cover"
+            />
+          </section>
+        </section>
+      </section>
+      {/* Inspiration Video End */}
     </main>
   );
 }
