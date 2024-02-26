@@ -457,7 +457,7 @@ export default function Page() {
           </p>
         </section>
 
-        <section className="w-full flex items-center gap-5">
+        <section className="w-full flex md:flex-row flex-col items-start gap-5">
           <section className="w-full space-y-8">
             <Image
               src="/images/banner-3.jpg"
@@ -477,7 +477,7 @@ export default function Page() {
             <Accordion
               type="single"
               collapsible
-              className="w-full"
+              className="w-full space-y-5"
               defaultValue="item-1"
             >
               <AccordionItem value="item-1">
