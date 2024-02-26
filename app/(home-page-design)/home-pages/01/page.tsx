@@ -22,6 +22,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./_parts/ui/accordion";
 import Marquee from "react-fast-marquee";
 import { Button } from "@/components/ui/button";
 import { AwardSection } from "./_parts/client-comps";
@@ -451,10 +457,68 @@ export default function Page() {
           </p>
         </section>
 
-        <section>
-          <section></section>
+        <section className="w-full flex items-center gap-5">
+          <section className="w-full space-y-8">
+            <Image
+              src="/images/banner-3.jpg"
+              alt="image"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover"
+            />
+            <AnimatedUnderline variant={"leftReverse"}>
+              <Link href={""} className="text-sm uppercase">
+                Get In Touch
+              </Link>
+            </AnimatedUnderline>
+          </section>
 
-          <section></section>
+          <section className="w-full">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full"
+              defaultValue="item-1"
+            >
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Creative Design</AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus iusto nisi ducimus! Voluptatum placeat minima ea
+                  eligendi eius rerum neque.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger>For The Business</AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem ipsa modi fuga accusamus harum voluptatum, officiis
+                  ipsum quae, dolorum velit vitae ducimus dignissimos. Illum,
+                  esse odit?
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Supreme Backend</AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae impedit aspernatur, quod voluptatum ipsum quidem
+                  quas facilis quisquam!
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>World Class CMS</AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                  reiciendis expedita asperiores necessitatibus nobis autem,
+                  assumenda eveniet vel distinctio accusantium aliquam illo
+                  quaerat rem! Vitae ducimus neque cum optio!
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </section>
         </section>
       </section>
       {/* Create Section End */}
