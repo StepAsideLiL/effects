@@ -9,7 +9,7 @@ export default function Footer() {
             <Link
               rel="noopener noreferrer"
               href=""
-              className="flex justify-center space-x-3 lg:justify-start text-2xl font-semibold"
+              className="flex justify-center space-x-3 lg:justify-start text-2xl font-black font-mono"
             >
               Logo
             </Link>
