@@ -614,7 +614,7 @@ export default function Page() {
       {/* Testimonal End */}
 
       {/* Get In Touch */}
-      <section className="container bg-gradient-to-b from-green-300 to-green-700 text-background">
+      <section className="container bg-gradient-to-b from-gray-50 to-gray-500 text-background">
         <section className="w-full p-10 flex lg:flex-row flex-col justify-between lg:items-end items-start gap-3">
           <section className="max-w-4xl space-y-6">
             <p>Connect With Us</p>
@@ -624,7 +624,10 @@ export default function Page() {
           </section>
 
           <section className="flex-shrink-0">
-            <AnimatedUnderline variant={"leftReverse"}>
+            <AnimatedUnderline
+              variant={"leftReverse"}
+              className="after:bg-background"
+            >
               <Link href={""} className="text-sm uppercase">
                 Get In Touch
               </Link>
