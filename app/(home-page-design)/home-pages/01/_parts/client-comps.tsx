@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Triangle } from "lucide-react";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 const menus = [
   {
@@ -168,5 +169,14 @@ export function AwardSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+export function VideoPlayer() {
+  return (
+    <ReactPlayer
+      playing={true}
+      url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    />
   );
 }
