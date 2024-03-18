@@ -12,7 +12,7 @@ import CodeBlock from "@/components/effects/code-block/code-block";
 export default async function HackedTextDoc() {
   const file = await fs.readFile(
     process.cwd() + "/components/effects/hacked-text/hacked-text.tsx",
-    "utf8"
+    "utf8",
   );
 
   const usageImports = `import HackedText from "@/components/effects/hacked-text";`;

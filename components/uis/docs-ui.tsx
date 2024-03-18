@@ -13,8 +13,8 @@ export function ComponentContain({
   return (
     <section
       className={cn(
-        "min-h-screen relative flex flex-col items-center justify-center",
-        className
+        "relative flex min-h-screen flex-col items-center justify-center",
+        className,
       )}
     >
       {children}
@@ -27,7 +27,7 @@ export function MoveToDocLink() {
   return (
     <Link
       href={"#doc"}
-      className="absolute left-10 bottom-10 flex items-center gap-2"
+      className="absolute bottom-10 left-10 flex items-center gap-2"
     >
       Go to Doc <MoveDown size={"16"} />
     </Link>
@@ -44,7 +44,7 @@ export function DocContain({
 }) {
   return (
     <section
-      className={cn("container max-w-3xl mx-auto py-10 space-y-10", className)}
+      className={cn("container mx-auto max-w-3xl space-y-10 py-10", className)}
     >
       {children}
     </section>

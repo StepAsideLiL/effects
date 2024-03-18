@@ -27,7 +27,7 @@ export default function HackedText({
 
             return letters[Math.floor(Math.random() * 26)];
           })
-          .join("")
+          .join(""),
       );
 
       if (iterations >= children.length) {

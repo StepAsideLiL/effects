@@ -43,7 +43,7 @@ export default function SearchCommandMenu() {
     <>
       <Button
         variant={"outline"}
-        className="lg:w-96 w-full text-sm text-muted-foreground px-3 py-1 flex justify-between items-center"
+        className="flex w-full items-center justify-between px-3 py-1 text-sm text-muted-foreground lg:w-96"
         onClick={() => setOpen((open) => !open)}
       >
         <span>Search...</span>

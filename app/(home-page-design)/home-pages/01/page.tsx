@@ -99,22 +99,22 @@ export default function Page() {
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
+      icon: <User strokeWidth={1} className="size-10 lg:size-20" />,
     },
     {
       title: "CMS",
       amount: "230",
-      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
+      icon: <User strokeWidth={1} className="size-10 lg:size-20" />,
     },
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
+      icon: <User strokeWidth={1} className="size-10 lg:size-20" />,
     },
     {
       title: "Clients",
       amount: "140",
-      icon: <User strokeWidth={1} className="lg:size-20 size-10" />,
+      icon: <User strokeWidth={1} className="size-10 lg:size-20" />,
     },
   ];
 
@@ -139,28 +139,28 @@ export default function Page() {
   return (
     <main className="min-h-screen">
       {/* Banner */}
-      <section className="border-b border-b-primary lg:py-0 py-5">
+      <section className="border-b border-b-primary py-5 lg:py-0">
         <Carousel opts={{ loop: true }}>
           <CarouselContent>
             {bannerCarouselCards.map((item, i) => (
               <CarouselItem
                 key={i}
-                className="w-full flex items-center divide-x divide-primary"
+                className="flex w-full items-center divide-x divide-primary"
               >
-                <div className="lg:w-7/12 w-full px-20">
-                  <div className="flex lg:justify-start justify-center items-center gap-5 pb-4">
+                <div className="w-full px-20 lg:w-7/12">
+                  <div className="flex items-center justify-center gap-5 pb-4 lg:justify-start">
                     <Triangle size={40} className="rotate-90 text-primary/80" />
-                    <h3 className="text-muted-foreground text-lg lg:text-left text-center">
+                    <h3 className="text-center text-lg text-muted-foreground lg:text-left">
                       {item.subtitle}
                     </h3>
                   </div>
-                  <h1 className="lg:text-7xl text-4xl font-bold pb-10 lg:text-left text-center">
+                  <h1 className="pb-10 text-center text-4xl font-bold lg:text-left lg:text-7xl">
                     {item.title}
                   </h1>
-                  <p className="text-muted-foreground pb-10 lg:text-left text-center">
+                  <p className="pb-10 text-center text-muted-foreground lg:text-left">
                     {item.description}
                   </p>
-                  <div className="flex lg:justify-start justify-center pb-5">
+                  <div className="flex justify-center pb-5 lg:justify-start">
                     <AnimatedUnderline>
                       <Link href={item.href} className="text-sm">
                         MORE INFORMATION
@@ -169,14 +169,14 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="w-5/12 lg:block hidden">
-                  <div className="w-full h-[650px]">
+                <div className="hidden w-5/12 lg:block">
+                  <div className="h-[650px] w-full">
                     <Image
                       src={item.imgSrc}
                       alt="Banner Image"
                       width={1000}
                       height={1000}
-                      className="w-full h-full object-cover grayscale"
+                      className="h-full w-full object-cover grayscale"
                     />
                   </div>
                 </div>
@@ -184,15 +184,15 @@ export default function Page() {
             ))}
           </CarouselContent>
 
-          <BannerCarouselNext className="lg:absolute relative lg:left-[58%] -translate-x-1/2 left-1/2 lg:bottom-10 bottom-3" />
+          <BannerCarouselNext className="relative bottom-3 left-1/2 -translate-x-1/2 lg:absolute lg:bottom-10 lg:left-[58%]" />
         </Carousel>
       </section>
       {/* Banner ENd */}
 
       {/* 2nd section */}
       <section className="border-b border-b-primary">
-        <div className="py-20 container flex md:flex-row flex-col items-center">
-          <div className="w-full md:px-10 px-0 space-y-8">
+        <div className="container flex flex-col items-center py-20 md:flex-row">
+          <div className="w-full space-y-8 px-0 md:px-10">
             <h1 className="text-3xl font-semibold uppercase">
               Building High Quality User Experience Is What Drive Us Toward Our
               Goal
@@ -211,11 +211,11 @@ export default function Page() {
 
           <Separator
             orientation="vertical"
-            className="h-32 bg-primary md:block hidden"
+            className="hidden h-32 bg-primary md:block"
           />
-          <Separator className="my-10 bg-primary block md:hidden" />
+          <Separator className="my-10 block bg-primary md:hidden" />
 
-          <div className="w-full relative md:px-10 px-0">
+          <div className="relative w-full px-0 md:px-10">
             <p className="sticky top-0">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
               iure sunt obcaecati iusto voluptates esse suscipit. Iusto non id
@@ -228,20 +228,20 @@ export default function Page() {
       {/* 2nd section End */}
 
       {/* 3rd section: Our Services */}
-      <section className="container py-20 space-y-8">
-        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+      <section className="container space-y-8 py-20">
+        <section className="flex w-full flex-col items-center justify-between gap-3 lg:flex-row">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
               <Triangle size={40} className="rotate-90 text-primary/80" />
-              <h1 className="lg:text-4xl text-2xl font-medium">OUR SERVICES</h1>
+              <h1 className="text-2xl font-medium lg:text-4xl">OUR SERVICES</h1>
             </div>
-            <p className="text-muted-foreground lg:text-base text-sm">
+            <p className="text-sm text-muted-foreground lg:text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex lg:justify-end justify-start">
+          <div className="flex w-full justify-start lg:justify-end">
             <AnimatedUnderline variant={"rightReverse"} asChild>
               <Link href={""} className="text-sm">
                 VIEW ALL SERVICES
@@ -250,7 +250,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="grid lg:grid-cols-3 grid-cols-1 gap-2">
+        <section className="grid grid-cols-1 gap-2 lg:grid-cols-3">
           {servicesCard.map((item, i) => (
             <Card key={i}>
               <CardHeader>
@@ -260,7 +260,7 @@ export default function Page() {
 
               <CardContent>{item.desciption}</CardContent>
 
-              <CardFooter className="text-background bg-foreground pt-6">
+              <CardFooter className="bg-foreground pt-6 text-background">
                 <AnimatedUnderline
                   variant={"leftReverse"}
                   asChild
@@ -286,9 +286,9 @@ export default function Page() {
           className="overflow-hidden"
         >
           {servicesCard.map((item, i) => (
-            <span key={i} className="px-3 flex items-center gap-3">
+            <span key={i} className="flex items-center gap-3 px-3">
               <span
-                className="lg:text-6xl text-2xl hover:text-background transition"
+                className="text-2xl transition hover:text-background lg:text-6xl"
                 style={{
                   textShadow:
                     "-1px -1px 0 hsl(var(--primary)), 1px -1px 0 hsl(var(--primary)), -1px 1px 0 hsl(var(--primary)), 1px 1px 0 hsl(var(--primary))",
@@ -298,7 +298,7 @@ export default function Page() {
               </span>
               <Triangle
                 strokeWidth={3}
-                className="lg:size-12 size-6 rotate-90 text-primary/80"
+                className="size-6 rotate-90 text-primary/80 lg:size-12"
               />
             </span>
           ))}
@@ -307,20 +307,20 @@ export default function Page() {
       {/* 4nd section: Marquee End */}
 
       {/* Our Projects */}
-      <section className="container py-20 space-y-8">
-        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+      <section className="container space-y-8 py-20">
+        <section className="flex w-full flex-col items-center justify-between gap-3 lg:flex-row">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
               <Triangle size={40} className="rotate-90 text-primary/80" />
-              <h1 className="lg:text-4xl text-2xl font-medium">OUR PROJECTS</h1>
+              <h1 className="text-2xl font-medium lg:text-4xl">OUR PROJECTS</h1>
             </div>
-            <p className="text-muted-foreground lg:text-base text-sm">
+            <p className="text-sm text-muted-foreground lg:text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex lg:justify-end justify-start">
+          <div className="flex w-full justify-start lg:justify-end">
             <AnimatedUnderline variant={"rightReverse"} asChild>
               <Link href={""} className="text-sm">
                 VIEW ALL PROJECTS
@@ -330,23 +330,23 @@ export default function Page() {
         </section>
 
         <section>
-          <section className="grid lg:grid-cols-3 grid-cols-1 place-items-center gap-3">
-            <div className="relative group border border-foreground">
+          <section className="grid grid-cols-1 place-items-center gap-3 lg:grid-cols-3">
+            <div className="group relative border border-foreground">
               <div className="aspect-video overflow-hidden">
                 <Image
                   src={"/images/project-1.jpg"}
                   alt="Banner Image"
                   width={1000}
                   height={1000}
-                  className="w-full h-full object-cover transition group-hover:scale-105"
+                  className="h-full w-full object-cover transition group-hover:scale-105"
                 />
               </div>
-              <div className="bg-secondary/30 absolute inset-0 lg:opacity-0 opacity-100 group-hover:opacity-100 transition">
-                <div className="h-full grid place-content-center gap-5">
+              <div className="absolute inset-0 bg-secondary/30 opacity-100 transition group-hover:opacity-100 lg:opacity-0">
+                <div className="grid h-full place-content-center gap-5">
                   <h1 className="text-3xl font-medium">Content Management</h1>
                   <Link
                     href={""}
-                    className="w-fit p-3 inline-block border border-foreground rounded-full"
+                    className="inline-block w-fit rounded-full border border-foreground p-3"
                   >
                     <MoveUp className="rotate-45" />
                   </Link>
@@ -354,22 +354,22 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="relative group border border-foreground">
+            <div className="group relative border border-foreground">
               <div className="aspect-video overflow-hidden">
                 <Image
                   src={"/images/project-2.jpg"}
                   alt="Banner Image"
                   width={1000}
                   height={1000}
-                  className="w-full h-full object-cover transition group-hover:scale-105"
+                  className="h-full w-full object-cover transition group-hover:scale-105"
                 />
               </div>
-              <div className="bg-secondary/30 absolute inset-0 lg:opacity-0 opacity-100 group-hover:opacity-100 transition">
-                <div className="h-full grid place-content-center gap-5">
+              <div className="absolute inset-0 bg-secondary/30 opacity-100 transition group-hover:opacity-100 lg:opacity-0">
+                <div className="grid h-full place-content-center gap-5">
                   <h1 className="text-3xl font-medium">Design Backend</h1>
                   <Link
                     href={""}
-                    className="w-fit p-3 inline-block border border-foreground rounded-full"
+                    className="inline-block w-fit rounded-full border border-foreground p-3"
                   >
                     <MoveUp className="rotate-45" />
                   </Link>
@@ -378,10 +378,10 @@ export default function Page() {
             </div>
 
             <div>
-              <h1 className="uppercase text-3xl font-medium">
+              <h1 className="text-3xl font-medium uppercase">
                 Full Infrastructure
               </h1>
-              <p className="text-muted-foreground pb-4">
+              <p className="pb-4 text-muted-foreground">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
                 quaerat.
               </p>
@@ -397,14 +397,14 @@ export default function Page() {
       {/* Our Projects End */}
 
       {/* Branding Section */}
-      <section className="container py-20 space-y-8">
-        <h1 className="lg:text-5xl text-2xl font-semibold text-center">
+      <section className="container space-y-8 py-20">
+        <h1 className="text-center text-2xl font-semibold lg:text-5xl">
           Our Brand Create The Best Backend For Our Partner. The Supirior CMS &
           Backend Coupled With The Best Design This World Has To Offer For Web &
           Mobile Application
         </h1>
 
-        <p className="lg:text-base text-sm text-center text-muted-foreground">
+        <p className="text-center text-sm text-muted-foreground lg:text-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi
           architecto pariatur perferendis corrupti. Nisi ipsa dolorem autem
           delectus nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -413,17 +413,17 @@ export default function Page() {
           mollitia incidunt hic necessitatibus vitae ipsa.
         </p>
 
-        <div className="flex flex-wrap justify-between items-center gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           {projectInfo.map((item, i) => (
-            <div key={i} className="flex justify-between items-center gap-5">
-              <div className="p-3 border border-foreground rounded-full">
+            <div key={i} className="flex items-center justify-between gap-5">
+              <div className="rounded-full border border-foreground p-3">
                 {item.icon}
               </div>
               <div>
-                <h1 className="font-medium uppercase lg:text-base text-xs">
+                <h1 className="text-xs font-medium uppercase lg:text-base">
                   {item.title}
                 </h1>
-                <p className="lg:text-3xl text-2xl font-medium">
+                <p className="text-2xl font-medium lg:text-3xl">
                   {item.amount}+
                 </p>
               </div>
@@ -442,22 +442,22 @@ export default function Page() {
       {/* Branding Section End */}
 
       {/* Awards Section */}
-      <section className="container py-20 space-y-8">
-        <section className="w-full flex lg:flex-row flex-col justify-between items-center gap-3">
+      <section className="container space-y-8 py-20">
+        <section className="flex w-full flex-col items-center justify-between gap-3 lg:flex-row">
           <div className="w-full space-y-2">
             <div className="flex gap-5">
               <Triangle size={40} className="rotate-90 text-primary/80" />
-              <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+              <h1 className="text-2xl font-medium uppercase lg:text-4xl">
                 OUR Awards
               </h1>
             </div>
-            <p className="text-muted-foreground lg:text-base text-sm">
+            <p className="text-sm text-muted-foreground lg:text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
               esse quisquam! Reprehenderit iste mollitia laudantium?
             </p>
           </div>
 
-          <div className="w-full flex lg:justify-end justify-start">
+          <div className="flex w-full justify-start lg:justify-end">
             <AnimatedUnderline variant={"rightReverse"} asChild>
               <Link href={""} className="text-sm">
                 VIEW ALL AWARDS
@@ -471,28 +471,28 @@ export default function Page() {
       {/* Awards Section End */}
 
       {/* Create Section */}
-      <section className="container py-20 space-y-8">
+      <section className="container space-y-8 py-20">
         <section className="w-full space-y-2">
           <div className="flex gap-5">
             <Triangle size={40} className="rotate-90 text-primary/80" />
-            <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+            <h1 className="text-2xl font-medium uppercase lg:text-4xl">
               We Create For You
             </h1>
           </div>
-          <p className="text-muted-foreground lg:text-base text-sm">
+          <p className="text-sm text-muted-foreground lg:text-base">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
             esse quisquam! Reprehenderit iste mollitia laudantium?
           </p>
         </section>
 
-        <section className="w-full flex md:flex-row flex-col items-start gap-5">
+        <section className="flex w-full flex-col items-start gap-5 md:flex-row">
           <section className="w-full space-y-8">
             <Image
               src="/images/banner-3.jpg"
               alt="image"
               width={1000}
               height={1000}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
             <AnimatedUnderline variant={"leftReverse"}>
               <Link href={""} className="text-sm uppercase">
@@ -553,9 +553,9 @@ export default function Page() {
 
       {/* Inspiration Video */}
       <section className="border-y border-y-foreground">
-        <section className="px-10 max-w-7xl mx-auto py-20 flex lg:flex-row flex-col gap-10">
+        <section className="mx-auto flex max-w-7xl flex-col gap-10 px-10 py-20 lg:flex-row">
           <section className="w-full space-y-8">
-            <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+            <h1 className="text-2xl font-medium uppercase lg:text-4xl">
               Watching This Well Make Video Will clear All Your Worries
             </h1>
             <AnimatedUnderline variant={"leftReverse"}>
@@ -567,10 +567,10 @@ export default function Page() {
 
           <section className="relative w-full">
             <Dialog>
-              <DialogTrigger className="absolute z-30 top-10 left-10 border border-foreground p-10 rounded-full hover:scale-95 transition">
+              <DialogTrigger className="absolute left-10 top-10 z-30 rounded-full border border-foreground p-10 transition hover:scale-95">
                 <Play className="size-20 text-white" />
               </DialogTrigger>
-              <DialogContent className="p-10 max-w-3xl w-fit mx-auto">
+              <DialogContent className="mx-auto w-fit max-w-3xl p-10">
                 <VideoPlayer />
               </DialogContent>
             </Dialog>
@@ -580,7 +580,7 @@ export default function Page() {
               alt="image"
               width={1000}
               height={1000}
-              className="lg:absolute relative aspect-video object-cover"
+              className="relative aspect-video object-cover lg:absolute"
             />
           </section>
         </section>
@@ -588,15 +588,15 @@ export default function Page() {
       {/* Inspiration Video End */}
 
       {/* Testimonal */}
-      <section className="container pt-40 pb-20 space-y-9">
-        <div className="flex gap-5 justify-center">
+      <section className="container space-y-9 pb-20 pt-40">
+        <div className="flex justify-center gap-5">
           <Triangle size={40} className="rotate-90 text-primary/80" />
-          <h1 className="lg:text-4xl text-2xl font-medium uppercase">
+          <h1 className="text-2xl font-medium uppercase lg:text-4xl">
             Testimonal
           </h1>
         </div>
 
-        <section className="grid lg:grid-cols-3 grid-cols-1 gap-3">
+        <section className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           {testimonals.map((item, i) => (
             <Card key={i}>
               <CardContent className="pt-6 first-letter:text-2xl first-letter:font-bold">
@@ -615,10 +615,10 @@ export default function Page() {
 
       {/* Get In Touch */}
       <section className="container bg-gradient-to-b from-gray-50 to-gray-500 text-background">
-        <section className="w-full p-10 flex lg:flex-row flex-col justify-between lg:items-end items-start gap-3">
+        <section className="flex w-full flex-col items-start justify-between gap-3 p-10 lg:flex-row lg:items-end">
           <section className="max-w-4xl space-y-6">
             <p>Connect With Us</p>
-            <h1 className="lg:text-4xl text-2xl font-bold uppercase">
+            <h1 className="text-2xl font-bold uppercase lg:text-4xl">
               We Will Create A Solution Just For You and Your Business
             </h1>
           </section>

@@ -18,25 +18,25 @@ import {
 
 export default function Navbar() {
   return (
-    <header className="w-full flex justify-between items-center border-b border-b-primary">
-      <div className="w-full px-5 flex justify-start items-center">
-        <span className="text-2xl font-black font-mono">Logo</span>
+    <header className="flex w-full items-center justify-between border-b border-b-primary">
+      <div className="flex w-full items-center justify-start px-5">
+        <span className="font-mono text-2xl font-black">Logo</span>
       </div>
 
-      <div className="w-full hidden lg:flex justify-center items-center">
+      <div className="hidden w-full items-center justify-center lg:flex">
         <HeaderMenu />
       </div>
 
-      <div className="w-full flex justify-end items-center">
+      <div className="flex w-full items-center justify-end">
         <Separator orientation="vertical" className="h-16 bg-primary" />
-        <div className="lg:block hidden px-3">
+        <div className="hidden px-3 lg:block">
           <Sheet>
             <SheetTrigger>
-              <Menu className="stroke-2 hover:stroke-1 transition" />
+              <Menu className="stroke-2 transition hover:stroke-1" />
             </SheetTrigger>
 
-            <InfoSheetContent className="lg:min-w-[512px] overflow-auto">
-              <div className="pt-10 space-y-5">
+            <InfoSheetContent className="overflow-auto lg:min-w-[512px]">
+              <div className="space-y-5 pt-10">
                 <h1 className="text-2xl font-medium">About Us</h1>
                 <div className="aspect-video">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -69,17 +69,17 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-4 border border-primary divide-x divide-primary">
-                  <Link href={""} className="py-5 grid place-content-center">
+                <div className="grid grid-cols-4 divide-x divide-primary border border-primary">
+                  <Link href={""} className="grid place-content-center py-5">
                     <FacebookIcon />
                   </Link>
-                  <Link href={""} className="py-5 grid place-content-center">
+                  <Link href={""} className="grid place-content-center py-5">
                     <InstagramIcon />
                   </Link>
-                  <Link href={""} className="py-5 grid place-content-center">
+                  <Link href={""} className="grid place-content-center py-5">
                     <YoutubeIcon />
                   </Link>
-                  <Link href={""} className="py-5 grid place-content-center">
+                  <Link href={""} className="grid place-content-center py-5">
                     <LinkedinIcon />
                   </Link>
                 </div>
@@ -88,10 +88,10 @@ export default function Navbar() {
           </Sheet>
         </div>
 
-        <div className="block lg:hidden px-3">
+        <div className="block px-3 lg:hidden">
           <Sheet>
             <SheetTrigger>
-              <Menu className="stroke-2 hover:stroke-1 transition" />
+              <Menu className="stroke-2 transition hover:stroke-1" />
             </SheetTrigger>
 
             <MobileSheetContent className="w-full overflow-auto">

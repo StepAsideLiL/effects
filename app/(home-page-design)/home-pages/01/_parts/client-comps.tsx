@@ -33,7 +33,7 @@ export function HeaderMenu() {
   const pathname = usePathname();
 
   return (
-    <nav className={cn("flex justify-center items-center gap-5")}>
+    <nav className={cn("flex items-center justify-center gap-5")}>
       {menus.map((item, i) => (
         <AnimatedUnderline
           key={i}
@@ -57,8 +57,8 @@ export function MobileSideMenu() {
           key={i}
           href={``}
           className={cn(
-            "w-full py-1 text-lg px-2",
-            item.href === pathname && "bg-muted"
+            "w-full px-2 py-1 text-lg",
+            item.href === pathname && "bg-muted",
           )}
         >
           {item.title}
@@ -111,8 +111,8 @@ export function AwardSection() {
 
   return (
     <section className="border border-foreground">
-      <div className="flex gap-10 items-center">
-        <div className="lg:w-[612px] w-96 lg:p-20 p-7">
+      <div className="flex items-center gap-10">
+        <div className="w-96 p-7 lg:w-[612px] lg:p-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedTab ? selectedTab.image : "empty"}
@@ -122,27 +122,27 @@ export function AwardSection() {
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="relative aspect-square"
             >
-              <div className="w-full h-full bg-foreground"></div>
+              <div className="h-full w-full bg-foreground"></div>
               <Image
                 src={selectedTab.image}
                 alt="Banner Image"
                 width={1000}
                 height={1000}
-                className="absolute inset-0 w-full h-full object-cover -rotate-12"
+                className="absolute inset-0 h-full w-full -rotate-12 object-cover"
               />
             </motion.div>
           </AnimatePresence>
         </div>
 
-        <div className="flex-1 flex flex-col justify-center py-4 divide-y divide-foreground">
+        <div className="flex flex-1 flex-col justify-center divide-y divide-foreground py-4">
           {tabs.map((item, i) => (
             <div
               key={i}
-              className="lg:pl-10 relative px-5 py-3 flex items-center gap-4 select-none cursor-pointer"
+              className="relative flex cursor-pointer select-none items-center gap-4 px-5 py-3 lg:pl-10"
               onClick={() => setSelectedTab(item)}
               onMouseEnter={() => setSelectedTab(item)}
             >
-              <div className="size-10 md:block hidden">
+              <div className="hidden size-10 md:block">
                 {item.id === selectedTab.id && (
                   <motion.div
                     initial={{ x: -20, opacity: 0 }}
@@ -153,17 +153,17 @@ export function AwardSection() {
                   </motion.div>
                 )}
               </div>
-              <h1 className="md:block hidden lg:text-2xl text-lg flex-1">
+              <h1 className="hidden flex-1 text-lg md:block lg:text-2xl">
                 {item.title}
               </h1>
               <p>{item.year}</p>
               {item.id === selectedTab.id && (
                 <motion.div
-                  className="absolute -left-px top-0 bottom-0 bg-background w-px h-full z-10"
+                  className="absolute -left-px bottom-0 top-0 z-10 h-full w-px bg-background"
                   layoutId="sideline"
                 />
               )}
-              <div className="absolute -left-px top-0 bottom-0 bg-foreground w-px h-full" />
+              <div className="absolute -left-px bottom-0 top-0 h-full w-px bg-foreground" />
             </div>
           ))}
         </div>

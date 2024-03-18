@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="dark:bg-background bg-gray-200">
+    <div className="bg-gray-200 dark:bg-background">
       <Navbar />
 
       {children}

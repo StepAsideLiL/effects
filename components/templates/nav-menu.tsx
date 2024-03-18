@@ -16,7 +16,7 @@ export default function NavMenu({
     <nav
       className={cn(
         orientation !== "vertical" && "flex items-center gap-2",
-        orientation === "vertical" && "flex flex-col"
+        orientation === "vertical" && "flex flex-col",
       )}
     >
       {menus.mainHeaderMenu.map((item) => (
@@ -25,7 +25,7 @@ export default function NavMenu({
           href={item.href}
           className={cn(
             "text-muted-foreground hover:underline",
-            pathname === item.href && "text-foreground underline"
+            pathname === item.href && "text-foreground underline",
           )}
         >
           {item.title}

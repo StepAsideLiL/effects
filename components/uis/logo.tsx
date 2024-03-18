@@ -18,20 +18,20 @@ export default function Logo({
 
 function Icon() {
   return (
-    <div className="w-10 h-10 flex justify-between items-center gap-1 rotate-45">
-      <div className="flex flex-col gap-2 items-end">
-        <div className="bg-foreground w-1.5 h-0.5 rounded"></div>
-        <div className="bg-foreground w-3.5 h-0.5 rounded"></div>
-        <div className="bg-foreground w-1.5 h-0.5 rounded"></div>
+    <div className="flex h-10 w-10 rotate-45 items-center justify-between gap-1">
+      <div className="flex flex-col items-end gap-2">
+        <div className="h-0.5 w-1.5 rounded bg-foreground"></div>
+        <div className="h-0.5 w-3.5 rounded bg-foreground"></div>
+        <div className="h-0.5 w-1.5 rounded bg-foreground"></div>
       </div>
 
-      <div className="bg-foreground w-0.5 h-full rounded"></div>
+      <div className="h-full w-0.5 rounded bg-foreground"></div>
 
       <div>
-        <div className="flex flex-col gap-2 items-start">
-          <div className="bg-foreground w-1.5 h-0.5 rounded"></div>
-          <div className="bg-foreground w-3.5 h-0.5 rounded"></div>
-          <div className="bg-foreground w-1.5 h-0.5 rounded"></div>
+        <div className="flex flex-col items-start gap-2">
+          <div className="h-0.5 w-1.5 rounded bg-foreground"></div>
+          <div className="h-0.5 w-3.5 rounded bg-foreground"></div>
+          <div className="h-0.5 w-1.5 rounded bg-foreground"></div>
         </div>
       </div>
     </div>

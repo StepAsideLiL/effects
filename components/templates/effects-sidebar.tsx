@@ -14,7 +14,7 @@ export default function EffectsSidebar() {
         <Link
           key={item.href}
           href={item.href}
-          className={cn("text-muted-foreground text-sm hover:underline")}
+          className={cn("text-sm text-muted-foreground hover:underline")}
         >
           {item.title}
         </Link>

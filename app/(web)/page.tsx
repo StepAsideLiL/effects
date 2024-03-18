@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="container min-h-screen py-4 space-y-4">
+    <main className="container min-h-screen space-y-4 py-4">
       <section className="space-y-10 py-10">
         <section className="space-y-2">
-          <h3 className="md:text-xl text-base text-muted-foreground text-center">
+          <h3 className="text-center text-base text-muted-foreground md:text-xl">
             Embrace The Power Of Copy-Paste
           </h3>
           <HackedText
             className={cn(
               rubikMonoOne.className,
-              "w-fit mx-auto lg:block hidden text-center text-6xl"
+              "mx-auto hidden w-fit text-center text-6xl lg:block",
             )}
           >
             EFFECTS & STYLES
@@ -28,16 +28,16 @@ export default function HomePage() {
           <h1
             className={cn(
               rubikMonoOne.className,
-              "text-center text-4xl lg:hidden block"
+              "block text-center text-4xl lg:hidden",
             )}
           >
             EFFECTS & STYLES
           </h1>
         </section>
 
-        <p className="md:text-xl text-lg font-medium text-center">FOR</p>
+        <p className="text-center text-lg font-medium md:text-xl">FOR</p>
 
-        <section className="flex justify-center items-center gap-10">
+        <section className="flex items-center justify-center gap-10">
           <Link href={`https://nextjs.org/`} target="_blank">
             <NextjsIcon />
           </Link>

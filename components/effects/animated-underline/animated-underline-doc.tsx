@@ -14,7 +14,7 @@ export default async function AnimatedUnderlineDoc() {
   const file = await fs.readFile(
     process.cwd() +
       "/components/effects/animated-underline/animated-underline.tsx",
-    "utf8"
+    "utf8",
   );
 
   const usageImports = `import { AnimatedUnderline } from "@/components/effects/animated-underline";

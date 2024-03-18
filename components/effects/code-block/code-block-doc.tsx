@@ -13,7 +13,7 @@ import CopyText from "@/components/effects/copy-text/copy-text";
 export default async function CodeBlockDoc() {
   const file = await fs.readFile(
     process.cwd() + "/components/effects/code-block/code-block.tsx",
-    "utf8"
+    "utf8",
   );
 
   const usageImports = `import { promises as fs } from "fs";
@@ -72,5 +72,5 @@ import CodeBlock from "@/components/effects/code-block`;
 }
 
 function Code({ children }: { children: string }) {
-  return <code className="bg-muted px-1 py-0.5 rounded">{children}</code>;
+  return <code className="rounded bg-muted px-1 py-0.5">{children}</code>;
 }

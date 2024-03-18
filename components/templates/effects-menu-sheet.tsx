@@ -45,8 +45,8 @@ export default function EffectsMenuSheet() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-muted-foreground text-sm hover:underline",
-                  pathname === item.href && "text-foreground underline"
+                  "text-sm text-muted-foreground hover:underline",
+                  pathname === item.href && "text-foreground underline",
                 )}
                 onClick={() => setOpen(false)}
               >

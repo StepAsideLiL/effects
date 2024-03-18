@@ -7,18 +7,18 @@ import SearchCommandMenu from "./search-command-menu";
 
 export default function Navbar() {
   return (
-    <header className="container py-4 flex justify-between items-center gap-5">
-      <div className="lg:w-full lg:flex hidden items-center gap-5">
+    <header className="container flex items-center justify-between gap-5 py-4">
+      <div className="hidden items-center gap-5 lg:flex lg:w-full">
         <Logo variant="link" />
 
         <NavMenu />
       </div>
 
-      <div className="lg:hidden block">
+      <div className="block lg:hidden">
         <EffectsMenuSheet />
       </div>
 
-      <div className="w-full flex justify-end items-center gap-5">
+      <div className="flex w-full items-center justify-end gap-5">
         <SearchCommandMenu />
         <ModeToggle />
       </div>

@@ -7,7 +7,7 @@ import CodeBlockDoc from "@/components/effects/code-block/code-block-doc";
 export default async function Page() {
   const file = await fs.readFile(
     process.cwd() + "/components/effects/code-block/code-block.tsx",
-    "utf8"
+    "utf8",
   );
 
   return (

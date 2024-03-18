@@ -36,7 +36,7 @@ export default function CodeBlock({
   };
 
   return (
-    <div className={cn("w-[512px] max-w-full border rounded", className)}>
+    <div className={cn("w-[512px] max-w-full rounded border", className)}>
       <div className="flex justify-between p-2">
         <code>{filename}</code>
 
@@ -48,7 +48,7 @@ export default function CodeBlock({
       <Separator />
 
       <pre className="rounded">
-        <ScrollArea className={cn("h-96 rounded", hfit && "max-h-96 h-fit")}>
+        <ScrollArea className={cn("h-96 rounded", hfit && "h-fit max-h-96")}>
           <code className="language-tsx">{code}</code>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>

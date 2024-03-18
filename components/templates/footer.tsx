@@ -4,7 +4,7 @@ import { AnimatedUnderline } from "../effects/animated-underline/animated-underl
 
 export default function Footer() {
   return (
-    <footer className="py-10 border-t">
+    <footer className="border-t py-10">
       <p className="text-center">
         Made by{" "}
         <AnimatedUnderline variant={"middleReverse"} asChild>

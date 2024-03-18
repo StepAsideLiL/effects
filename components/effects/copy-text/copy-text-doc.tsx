@@ -12,7 +12,7 @@ import CodeBlock from "@/components/effects/code-block/code-block";
 export default async function CopyTextDoc() {
   const file = await fs.readFile(
     process.cwd() + "/components/effects/copy-text/copy-text.tsx",
-    "utf8"
+    "utf8",
   );
 
   const usageImports = `import CopyText from "@/components/effects/copy-text";`;

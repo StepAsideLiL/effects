@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="min-h-screen container space-y-10">
+    <main className="container min-h-screen space-y-10">
       <h1 className="py-10 text-center text-2xl font-semibold">
         Every Website Deserve A Beautiful Website
       </h1>

@@ -24,7 +24,7 @@ const animatedUnderlineVariants = cva(
     defaultVariants: {
       variant: "default",
     },
-  }
+  },
 );
 
 export interface AnimatedUnderlineProps

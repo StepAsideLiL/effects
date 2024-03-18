@@ -5,7 +5,7 @@ import EffectsMenuSheet from "./effects-menu-sheet";
 
 export default function EffectsNavbar() {
   return (
-    <header className="container fixed top-3 flex items-center gap-3 z-50">
+    <header className="container fixed top-3 z-50 flex items-center gap-3">
       <EffectsMenuSheet />
 
       <Button variant={"ghost"} size={"icon"}>
