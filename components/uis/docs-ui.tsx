@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { MoveDown } from "lucide-react";
 import Link from "next/link";
+
+// Fullscreen popup dialog box
 import { DocDialog } from "@/components/uis/client-components";
 
 // Container for the component preview section.
