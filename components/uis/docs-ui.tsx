@@ -115,3 +115,13 @@ export function DocLink({
     </Link>
   );
 }
+
+export const Doc = {
+  componentPreviewContainer: ComponentContain,
+  container: DocContain,
+  section: DocSection,
+  title: DocTitle,
+  description: DocDecscription,
+  sectionTitle: DocSectionTitle,
+  link: DocLink,
+};
