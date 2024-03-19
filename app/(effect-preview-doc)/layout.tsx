@@ -1,5 +1,4 @@
 import EffectsNavbar from "@/components/templates/effects-navbar";
-import Footer from "@/components/templates/footer";
 
 export default function MainLayout({
   children,
@@ -11,8 +10,6 @@ export default function MainLayout({
       <EffectsNavbar />
 
       {children}
-
-      <Footer />
     </>
   );
 }
