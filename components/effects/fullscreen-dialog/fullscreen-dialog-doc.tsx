@@ -1,5 +1,4 @@
 import { Doc } from "@/components/uis/docs-ui";
-import React from "react";
 import { promises as fs } from "fs";
 import CodeBlock from "@/components/effects/code-block/code-block";
 
@@ -17,7 +16,7 @@ export default async function FullscreenDialogDoc() {
   FullscreenDialogHeader,
   FullscreenDialogTitle,
   FullscreenDialogTrigger,
-} from "@/components/effects/fullscreen-dialog/fullscreen-dialog";`;
+} from "@/components/effects/fullscreen-dialog";`;
 
   const usageComponents = `<FullscreenDialog>
   <FullscreenDialogTrigger>
