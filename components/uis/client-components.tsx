@@ -49,7 +49,7 @@ export function DocDialog({ children }: { children: React.ReactNode }) {
         <Button>Open Doc</Button>
       </FullscreenDialogTrigger>
 
-      <FullscreenDialogContent className="h-full w-full overflow-auto">
+      <FullscreenDialogContent>
         {children}
 
         <FullscreenDialogClose
