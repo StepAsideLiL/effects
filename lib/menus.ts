@@ -37,6 +37,12 @@ export const menus = {
       tags: ["style", "text", "copy"],
     },
     {
+      title: "Fullscreen Dialog",
+      href: "/effects/fullscreen-dialog",
+      type: "component",
+      tags: ["component", "dialog", "fullscreen"],
+    },
+    {
       title: "Hacked Text",
       href: "/effects/hacked-text",
       type: "effect",
