@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { MoveDown } from "lucide-react";
 import Link from "next/link";
+import { DocDialog } from "@/components/uis/client-components";
 
 // Container for the component preview section.
 export function ComponentContain({
@@ -124,4 +125,5 @@ export const Doc = {
   description: DocDecscription,
   sectionTitle: DocSectionTitle,
   link: DocLink,
+  dialog: DocDialog,
 };
