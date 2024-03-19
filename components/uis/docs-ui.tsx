@@ -100,6 +100,28 @@ export function DocSectionTitle({
   return <h2 className={cn("text-2xl font-medium", className)}>{children}</h2>;
 }
 
+// Section div in the documents.
+export function DocDiv({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={cn(className)}>{children}</div>;
+}
+
+// Section paragraph in the documents.
+export function DocP({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return <p className={cn(className)}>{children}</p>;
+}
+
 // Link style in the documents.
 export function DocLink({
   children,
@@ -125,5 +147,7 @@ export const Doc = {
   description: DocDecscription,
   sectionTitle: DocSectionTitle,
   link: DocLink,
+  div: DocDiv,
+  p: DocP,
   dialog: DocDialog,
 };
