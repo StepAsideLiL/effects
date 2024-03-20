@@ -3,7 +3,8 @@ import { MoveDown } from "lucide-react";
 import Link from "next/link";
 
 // Fullscreen popup dialog box
-import { DocDialog } from "@/components/uis/client-components";
+import { DocDialog as DD } from "@/components/uis/client-components";
+import { Suspense } from "react";
 
 // Container for the component preview section.
 export function ComponentContain({
@@ -138,6 +139,14 @@ export function DocLink({
     <Link href={href} className={cn("underline", className)} target="_blank">
       {children}
     </Link>
+  );
+}
+
+export function DocDialog({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense>
+      <DD>{children}</DD>
+    </Suspense>
   );
 }
 
