@@ -21,7 +21,7 @@ export function DocDialog({ children }: { children: React.ReactNode }) {
     const isOpen = params.get("doc");
     params.set("doc", "true");
     setOpen(isOpen === "true" ? true : false);
-  }, [pathname, replace, searchParams]);
+  }, [searchParams]);
 
   function handleOpen() {
     const params = new URLSearchParams(searchParams);
@@ -41,12 +41,8 @@ export function DocDialog({ children }: { children: React.ReactNode }) {
 
   return (
     <FullscreenDialog open={open} onOpenChange={setOpen}>
-      <FullscreenDialogTrigger
-        asChild
-        className="fixed bottom-10 left-10"
-        onClick={handleOpen}
-      >
-        <Button>Open Doc</Button>
+      <FullscreenDialogTrigger asChild className="fixed bottom-10 left-10">
+        <Button onClick={() => handleOpen()}>Open Doc</Button>
       </FullscreenDialogTrigger>
 
       <FullscreenDialogContent>
@@ -55,9 +51,10 @@ export function DocDialog({ children }: { children: React.ReactNode }) {
         <FullscreenDialogClose
           asChild
           className="absolute right-4 top-4 z-[100]"
-          onClick={handleClose}
         >
-          <Button variant={"outline"}>Close</Button>
+          <Button variant={"outline"} onClick={() => handleClose()}>
+            Close
+          </Button>
         </FullscreenDialogClose>
       </FullscreenDialogContent>
     </FullscreenDialog>
