@@ -14,7 +14,7 @@ import {
   Triangle,
   User,
 } from "lucide-react";
-import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
 import { Separator } from "@/components/ui/separator";
 import {
   Card,

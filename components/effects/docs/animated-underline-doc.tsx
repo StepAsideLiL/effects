@@ -7,13 +7,12 @@ import {
   DocTitle,
 } from "@/components/uis/docs-ui";
 import { promises as fs } from "fs";
-import CodeBlock from "@/components/effects/code-block/code-block";
-import CopyText from "@/components/effects/copy-text/copy-text";
+import CodeBlock from "@/components/effects/code-block";
+import CopyText from "@/components/effects/copy-text";
 
 export default async function AnimatedUnderlineDoc() {
   const file = await fs.readFile(
-    process.cwd() +
-      "/components/effects/animated-underline/animated-underline.tsx",
+    process.cwd() + "/components/effects/animated-underline.tsx",
     "utf8",
   );
 

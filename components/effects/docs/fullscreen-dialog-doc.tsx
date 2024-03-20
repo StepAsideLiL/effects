@@ -1,11 +1,10 @@
 import { Doc } from "@/components/uis/docs-ui";
 import { promises as fs } from "fs";
-import CodeBlock from "@/components/effects/code-block/code-block";
+import CodeBlock from "@/components/effects/code-block";
 
 export default async function FullscreenDialogDoc() {
   const file = await fs.readFile(
-    process.cwd() +
-      "/components/effects/fullscreen-dialog/fullscreen-dialog.tsx",
+    process.cwd() + "/components/effects/fullscreen-dialog.tsx",
     "utf8",
   );
 

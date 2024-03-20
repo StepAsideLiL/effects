@@ -1,4 +1,4 @@
-import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { menus } from "@/lib/menus";
 import Link from "next/link";

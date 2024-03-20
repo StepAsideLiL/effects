@@ -1,4 +1,4 @@
-import HackedText from "@/components/effects/hacked-text/hacked-text";
+import HackedText from "@/components/effects/hacked-text";
 import { NextjsIcon, ShadcnIcon } from "@/components/uis/svg-icons";
 import { rubikMonoOne } from "@/lib/fonts";
 import { cn } from "@/lib/utils";

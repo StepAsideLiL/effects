@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { AnimatedUnderline } from "../effects/animated-underline/animated-underline";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
 
 export default function Footer() {
   return (

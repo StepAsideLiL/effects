@@ -7,27 +7,30 @@ import {
   DocTitle,
 } from "@/components/uis/docs-ui";
 import { promises as fs } from "fs";
-import CodeBlock from "@/components/effects/code-block/code-block";
+import CodeBlock from "@/components/effects/code-block";
 
-export default async function CopyTextDoc() {
+export default async function HackedTextDoc() {
   const file = await fs.readFile(
-    process.cwd() + "/components/effects/copy-text/copy-text.tsx",
+    process.cwd() + "/components/effects/hacked-text.tsx",
     "utf8",
   );
 
-  const usageImports = `import CopyText from "@/components/effects/copy-text";`;
+  const usageImports = `import HackedText from "@/components/effects/hacked-text";`;
 
-  const usageComponents = `<CopyText>npx create-next-app@latest</CopyText>`;
+  const usageComponents = `<HackedText className="text-9xl">Hacked Text</HackedText>`;
 
   return (
     <DocContain>
       <DocSection>
-        <DocTitle>Copy Text</DocTitle>
-        <DocDecscription>Copy the inner text of this component</DocDecscription>
+        <DocTitle>Hacked Text</DocTitle>
+        <DocDecscription>
+          On mouseover, the text is randomized, and it returns to the initial
+          text one letter at a time.
+        </DocDecscription>
       </DocSection>
 
       <DocSection>
-        <DocSectionTitle>Required Packages</DocSectionTitle>
+        <DocSectionTitle>Required</DocSectionTitle>
         <p>
           Set up a{" "}
           <DocLink href="https://ui.shadcn.com/docs/installation/next">
@@ -41,7 +44,7 @@ export default async function CopyTextDoc() {
         <DocSectionTitle>Component</DocSectionTitle>
         <CodeBlock
           code={file}
-          filename="copy-text.tsx"
+          filename="hacked-text.tsx"
           hfit={false}
           className="w-full"
         />

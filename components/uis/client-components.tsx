@@ -5,7 +5,7 @@ import {
   FullscreenDialogClose,
   FullscreenDialogContent,
   FullscreenDialogTrigger,
-} from "@/components/effects/fullscreen-dialog/fullscreen-dialog";
+} from "@/components/effects/fullscreen-dialog";
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

@@ -1,5 +1,5 @@
-import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
-import AnimatedUnderlineDoc from "@/components/effects/animated-underline/animated-underline-doc";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
+import AnimatedUnderlineDoc from "@/components/effects/docs/animated-underline-doc";
 import { Separator } from "@/components/ui/separator";
 import { ComponentContain, MoveToDocLink } from "@/components/uis/docs-ui";
 import Link from "next/link";

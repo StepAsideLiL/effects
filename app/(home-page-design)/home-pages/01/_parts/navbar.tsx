@@ -7,7 +7,7 @@ import {
   SheetTrigger,
   MobileSheetContent,
 } from "./ui/sheet";
-import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
 import Link from "next/link";
 import {
   FacebookIcon,

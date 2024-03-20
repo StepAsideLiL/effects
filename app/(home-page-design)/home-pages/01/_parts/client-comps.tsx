@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatedUnderline } from "@/components/effects/animated-underline/animated-underline";
+import { AnimatedUnderline } from "@/components/effects/animated-underline";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

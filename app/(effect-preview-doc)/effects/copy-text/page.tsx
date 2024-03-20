@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ComponentContain, MoveToDocLink } from "@/components/uis/docs-ui";
-import CopyText from "@/components/effects/copy-text/copy-text";
-import CopyTextDoc from "@/components/effects/copy-text/copy-text-doc";
+import CopyText from "@/components/effects/copy-text";
+import CopyTextDoc from "@/components/effects/docs/copy-text-doc";
 
 export default async function Page() {
   return (

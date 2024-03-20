@@ -5,8 +5,8 @@ import {
   FullscreenDialogHeader,
   FullscreenDialogTitle,
   FullscreenDialogTrigger,
-} from "@/components/effects/fullscreen-dialog/fullscreen-dialog";
-import FullscreenDialogDoc from "@/components/effects/fullscreen-dialog/fullscreen-dialog-doc";
+} from "@/components/effects/fullscreen-dialog";
+import FullscreenDialogDoc from "@/components/effects/docs/fullscreen-dialog-doc";
 import { Doc } from "@/components/uis/docs-ui";
 
 export default function Page() {
