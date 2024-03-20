@@ -1,5 +1,4 @@
-import { Separator } from "@/components/ui/separator";
-import { ComponentContain, MoveToDocLink } from "@/components/uis/docs-ui";
+import { Doc } from "@/components/uis/docs-ui";
 import { promises as fs } from "fs";
 import CodeBlock from "@/components/effects/code-block";
 import CodeBlockDoc from "@/components/effects/docs/code-block-doc";
@@ -12,15 +11,13 @@ export default async function Page() {
 
   return (
     <main>
-      <ComponentContain>
+      <Doc.componentPreviewContainer>
         <CodeBlock code={file} filename="code-block.tsx" hfit={false} />
+      </Doc.componentPreviewContainer>
 
-        <MoveToDocLink />
-      </ComponentContain>
-
-      <Separator orientation="horizontal" />
-
-      <CodeBlockDoc />
+      <Doc.dialog>
+        <CodeBlockDoc />
+      </Doc.dialog>
     </main>
   );
 }

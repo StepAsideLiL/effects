@@ -1,13 +1,12 @@
 import { AnimatedUnderline } from "@/components/effects/animated-underline";
 import AnimatedUnderlineDoc from "@/components/effects/docs/animated-underline-doc";
-import { Separator } from "@/components/ui/separator";
-import { ComponentContain, MoveToDocLink } from "@/components/uis/docs-ui";
+import { Doc } from "@/components/uis/docs-ui";
 import Link from "next/link";
 
 export default function AnimatedUnderlinePage() {
   return (
     <main>
-      <ComponentContain className="gap-5">
+      <Doc.componentPreviewContainer className="gap-5">
         <AnimatedUnderline className="text-lg">
           Animated Underline Default
         </AnimatedUnderline>
@@ -37,13 +36,11 @@ export default function AnimatedUnderlinePage() {
             Animated Underline Link
           </Link>
         </AnimatedUnderline>
+      </Doc.componentPreviewContainer>
 
-        <MoveToDocLink />
-      </ComponentContain>
-
-      <Separator orientation="horizontal" />
-
-      <AnimatedUnderlineDoc />
+      <Doc.dialog>
+        <AnimatedUnderlineDoc />
+      </Doc.dialog>
     </main>
   );
 }

@@ -1,20 +1,17 @@
-import { Separator } from "@/components/ui/separator";
-import { ComponentContain, MoveToDocLink } from "@/components/uis/docs-ui";
+import { Doc } from "@/components/uis/docs-ui";
 import CopyText from "@/components/effects/copy-text";
 import CopyTextDoc from "@/components/effects/docs/copy-text-doc";
 
 export default async function Page() {
   return (
     <main>
-      <ComponentContain>
+      <Doc.componentPreviewContainer>
         <CopyText>npx create-next-app@latest</CopyText>
+      </Doc.componentPreviewContainer>
 
-        <MoveToDocLink />
-      </ComponentContain>
-
-      <Separator orientation="horizontal" />
-
-      <CopyTextDoc />
+      <Doc.dialog>
+        <CopyTextDoc />
+      </Doc.dialog>
     </main>
   );
 }
