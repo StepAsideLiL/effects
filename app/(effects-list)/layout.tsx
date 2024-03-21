@@ -12,14 +12,14 @@ export default function EffectsLayout({
     <>
       <Navbar />
 
-      <div className="container grid grid-cols-5 gap-10">
-        <aside className="lg:block hidden col-span-1">
+      <div className="container grid min-h-screen grid-cols-5 gap-10">
+        <aside className="col-span-1 hidden lg:block">
           <ScrollArea className="h-[calc(100vh-8rem)] py-5">
             <EffectsSidebar />
           </ScrollArea>
         </aside>
 
-        <main className="lg:col-span-4 col-span-5 space-y-10">{children}</main>
+        <main className="col-span-5 space-y-10 lg:col-span-4">{children}</main>
       </div>
 
       <Footer />
