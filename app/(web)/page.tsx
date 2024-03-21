@@ -4,6 +4,7 @@ import { rubikMonoOne } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import Link from "next/link";
+import { SiNextdotjs } from "react-icons/si";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -39,7 +40,7 @@ export default function HomePage() {
 
         <section className="flex items-center justify-center gap-10">
           <Link href={`https://nextjs.org/`} target="_blank">
-            <NextjsIcon />
+            <SiNextdotjs className="size-10" />
           </Link>
           <Link href={`https://ui.shadcn.com/`} target="_blank">
             <ShadcnIcon />
