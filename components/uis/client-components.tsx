@@ -23,6 +23,22 @@ export function DocDialog({ children }: { children: React.ReactNode }) {
     setOpen(isOpen === "true" ? true : false);
   }, [searchParams]);
 
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        const params = new URLSearchParams(searchParams);
+        params.set("doc", "false");
+        const isOpen = params.get("doc");
+        setOpen(isOpen === "true" ? true : false);
+        replace(`${pathname}?${params.toString()}`);
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [pathname, replace, searchParams]);
+
   function handleOpen() {
     const params = new URLSearchParams(searchParams);
     const isOpen = params.get("doc");
