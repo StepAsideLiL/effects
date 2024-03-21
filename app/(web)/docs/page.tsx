@@ -9,8 +9,8 @@ export default function Page() {
         <Doc.section>
           <Doc.title>Document</Doc.title>
           <Doc.description>
-            Simple and reusable React components for common and stylish UI
-            building, designed for Next.js, built on top of Shadcn/ui.
+            Simple and reusable React components for building common and stylish
+            UI, designed for Next.js, built on top of Shadcn/ui.
           </Doc.description>
         </Doc.section>
 
