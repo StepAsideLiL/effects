@@ -10,7 +10,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { menus } from "@/lib/menus";
 import { useRouter } from "next/navigation";
 import { MenuSquare, Sparkles } from "lucide-react";
@@ -43,14 +43,15 @@ export default function SearchCommandMenu() {
     <>
       <Button
         variant={"outline"}
-        className="flex w-full items-center justify-between px-3 py-1 text-sm text-muted-foreground lg:w-96"
+        className="flex w-full items-center justify-between px-3 py-1 text-sm text-muted-foreground lg:w-60"
         onClick={() => setOpen((open) => !open)}
       >
-        <span>Search...</span>
-        <span>
-          <span className="">⌘</span> <span className="font-mono">K</span>
-        </span>
+        <span>Search Effects...</span>
+        <kbd className="rounded bg-muted px-1 py-[2px] font-mono">
+          <span>⌘</span> <span>K</span>
+        </kbd>
       </Button>
+
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
@@ -61,6 +62,9 @@ export default function SearchCommandMenu() {
               value={"Home"}
               onSelect={() => {
                 runCommand(() => router.push("/" as string));
+              }}
+              onMouseEnter={() => {
+                console.log("hello home");
               }}
             >
               <MenuSquare className="mr-2 h-4 w-4" />
