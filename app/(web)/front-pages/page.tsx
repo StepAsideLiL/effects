@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <main className="container min-h-screen space-y-10">
       <h1 className="py-10 text-center text-2xl font-semibold">
-        Every Website Deserve A Beautiful Website
+        Every Website Deserve A Beautiful Front Page
       </h1>
 
       <section className="grid grid-cols-3 gap-2">

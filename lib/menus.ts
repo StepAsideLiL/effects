@@ -9,8 +9,8 @@ export const menus = {
       href: "/effects",
     },
     {
-      title: "Home pages",
-      href: "/home-pages",
+      title: "Front pages",
+      href: "/front-pages",
     },
     {
       title: "Designs",
