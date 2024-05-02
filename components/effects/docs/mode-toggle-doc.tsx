@@ -25,6 +25,12 @@ export default async function ModeToggleDoc() {
         <Doc.p>
           Initial Setup Form <Doc.link href="/docs">Docs</Doc.link>
         </Doc.p>
+        <Doc.p>
+          Follow the dark mode setup from{" "}
+          <Doc.link href="https://ui.shadcn.com/docs/dark-mode/next">
+            here
+          </Doc.link>
+        </Doc.p>
       </Doc.section>
 
       <Doc.section>
