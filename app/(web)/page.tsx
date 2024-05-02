@@ -16,7 +16,7 @@ export default function HomePage() {
       <section className="space-y-10 py-10">
         <section className="space-y-2">
           <h3 className="text-center text-base text-muted-foreground md:text-xl">
-            Embrace The Power Of Copy-Paste
+            A collection to useful components for faster development
           </h3>
           <HackedText
             className={cn(
@@ -24,7 +24,7 @@ export default function HomePage() {
               "mx-auto hidden w-fit text-center text-6xl lg:block",
             )}
           >
-            EFFECTS & STYLES
+            EFFECTS
           </HackedText>
           <h1
             className={cn(
@@ -32,7 +32,7 @@ export default function HomePage() {
               "block text-center text-4xl lg:hidden",
             )}
           >
-            EFFECTS & STYLES
+            EFFECTS
           </h1>
         </section>
 
