@@ -48,5 +48,11 @@ export const menus = {
       type: "effect",
       tags: ["effect", "text"],
     },
+    {
+      title: "Mode Toggle",
+      href: "/effects/mode-toggle",
+      type: "effect",
+      tags: ["effect", "mode", "toggle"],
+    },
   ],
 };
