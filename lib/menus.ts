@@ -54,5 +54,11 @@ export const menus = {
       type: "effect",
       tags: ["effect", "mode", "toggle"],
     },
+    {
+      title: "Timeline",
+      href: "/effects/timeline",
+      type: "style",
+      tags: ["style", "timeline", "list", "ordered"],
+    },
   ],
 };
