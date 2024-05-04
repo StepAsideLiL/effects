@@ -2,7 +2,7 @@
 
 A collection of useful components for faster development. Effects aims to provide a range of components from as simple as a button to complecated data table.
 
-## Motivation behind this project
+## Motivation Behind This Project
 
 There are a lot of common patterns in the web UI. Effects take those common UI patterns and turn them to components. These components will makes development easier and faster. Developer can use these UI patterns and learn from them.
 
