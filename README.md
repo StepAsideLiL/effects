@@ -41,7 +41,7 @@ git clone https://github.com/StepAsideLiL/effects.git
 When the cloning is completed, go to `effects` directory:
 
 ```
-cd ./effects
+cd effects
 ```
 
 Then run the following command to install all the dependencies:
