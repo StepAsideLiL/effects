@@ -4,7 +4,7 @@ A collection of useful components for faster development. Effects aims to provid
 
 ## Motivation Behind This Project
 
-There are a lot of common patterns in the web UI. Effects take those common UI patterns and turn them to components. These components will makes development easier and faster. Developer can use these UI patterns and learn from them.
+There are a lot of common patterns in the web UI. Effects take those common UI patterns and turn them to components. These components will make development easier and faster. Developers can use these UI patterns and learn from them.
 
 ## Quick Start
 
