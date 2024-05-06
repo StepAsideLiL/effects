@@ -1,6 +1,6 @@
 # [Effects](https://effects-sand.vercel.app/)
 
-A collection of useful components for faster development. Effects aims to provide a range of components from as simple as a button to complecated data table.
+A collection of useful components for faster development. Effects aims to provide a range of components from as simple as a button to a complicated data table.s
 
 ## Motivation Behind This Project
 
