@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/effects/mode-toggle";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-gray-200 dark:bg-background">
+    <>
       {/* Header */}
       <header className="py-5">
         <div className="container flex items-center gap-10">
@@ -18,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li>
                 <Link
                   href="#"
-                  className="rounded px-2 py-1 transition-colors hover:bg-muted/50"
+                  className="rounded px-2 py-1 font-semibold transition-colors hover:bg-muted/50"
                 >
                   Services
                 </Link>
@@ -26,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li>
                 <Link
                   href="#"
-                  className="rounded px-2 py-1 transition-colors hover:bg-muted/50"
+                  className="rounded px-2 py-1 font-semibold transition-colors hover:bg-muted/50"
                 >
                   Products
                 </Link>
@@ -34,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li>
                 <Link
                   href="#"
-                  className="rounded px-2 py-1 transition-colors hover:bg-muted/50"
+                  className="rounded px-2 py-1 font-semibold transition-colors hover:bg-muted/50"
                 >
                   Tools
                 </Link>
@@ -42,7 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li>
                 <Link
                   href="#"
-                  className="rounded px-2 py-1 transition-colors hover:bg-muted/50"
+                  className="rounded px-2 py-1 font-semibold transition-colors hover:bg-muted/50"
                 >
                   Contact
                 </Link>
@@ -50,12 +51,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </ul>
           </nav>
 
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-primary"
-          >
-            Login
-          </Link>
+          <div className="flex items-center gap-5">
+            <ModeToggle />
+
+            <Link
+              href="#"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              Login
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -64,6 +69,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer></footer>
-    </div>
+    </>
   );
 }
