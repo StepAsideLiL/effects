@@ -9,8 +9,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-gray-200 dark:bg-background">
       {/* Header */}
-      <div className="py-5">
-        <header className="container flex items-center gap-10">
+      <header className="py-5">
+        <div className="container flex items-center gap-10">
           <h1 className="text-2xl">Logo</h1>
 
           <nav className="flex-1">
@@ -56,8 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           >
             Login
           </Link>
-        </header>
-      </div>
+        </div>
+      </header>
 
       {/* Main body */}
       {children}
