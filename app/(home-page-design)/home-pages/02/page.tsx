@@ -266,9 +266,15 @@ export default function Page() {
       <section className="py-20">
         <div className="min-h-screen w-full">
           {ourVisions.map((list, i) => (
-            <div key={i} className="flex w-full items-center">
+            <div key={i} className="flex min-h-screen w-full items-center">
               <div className="w-full">
-                <Image src={list.image} alt="Image" width={1000} height={100} />
+                <Image
+                  src={list.image}
+                  alt="Image"
+                  width={1000}
+                  height={1000}
+                  className="min-h-screen object-cover"
+                />
               </div>
 
               <div className="flex w-full flex-col">
