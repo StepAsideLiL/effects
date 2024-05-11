@@ -8,6 +8,7 @@ import {
   AnimatedCardTitle,
 } from "./_parts/animated-card";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
       </section>
 
       {/* Products */}
-      <section className="mx-auto max-w-6xl space-y-24 py-20">
+      <section className="mx-auto max-w-6xl space-y-24 pt-20">
         <div className="mx-auto max-w-lg">
           <h1 className="text-center text-4xl font-medium">Our Product</h1>
           <p className="text-center text-muted-foreground">
@@ -85,6 +86,10 @@ export default function Page() {
               <Link href="#">Learn More</Link>
             </AnimatedCardFooter>
           </AnimatedCard>
+        </div>
+
+        <div className="pb-20">
+          <Separator className="bg-primary" />
         </div>
       </section>
 
