@@ -6,7 +6,7 @@ import {
   AnimatedCardFooter,
   AnimatedCardHeader,
   AnimatedCardTitle,
-} from "./_parts/animated-card";
+} from "./_uis/animated-card";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
