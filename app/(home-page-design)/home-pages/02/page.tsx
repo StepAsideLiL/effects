@@ -1,4 +1,13 @@
 import Balancer from "react-wrap-balancer";
+import {
+  AnimatedCard,
+  AnimatedCardContent,
+  AnimatedCardDescription,
+  AnimatedCardFooter,
+  AnimatedCardHeader,
+  AnimatedCardTitle,
+} from "./_parts/animated-card";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -13,7 +22,71 @@ export default function Page() {
       </section>
 
       {/* Products */}
-      <section></section>
+      <section className="mx-auto max-w-6xl space-y-24 py-20">
+        <div className="mx-auto max-w-lg">
+          <h1 className="text-center text-4xl font-medium">Our Product</h1>
+          <p className="text-center text-muted-foreground">
+            Our AD Network Services offer industry-leading solutions to elevate
+            your advertising campaigns.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-5">
+          <AnimatedCard>
+            <AnimatedCardHeader>
+              <AnimatedCardTitle>Social</AnimatedCardTitle>
+              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
+            </AnimatedCardHeader>
+
+            <AnimatedCardContent>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              distinctio totam consequuntur dignissimos autem modi voluptatum,
+              facilis reiciendis quod laboriosam, quaerat sequi maxime
+              exercitationem expedita a. Nam illum voluptas unde?
+            </AnimatedCardContent>
+
+            <AnimatedCardFooter>
+              <Link href="#">Learn More</Link>
+            </AnimatedCardFooter>
+          </AnimatedCard>
+
+          <AnimatedCard>
+            <AnimatedCardHeader>
+              <AnimatedCardTitle>Social</AnimatedCardTitle>
+              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
+            </AnimatedCardHeader>
+
+            <AnimatedCardContent>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              distinctio totam consequuntur dignissimos autem modi voluptatum,
+              facilis reiciendis quod laboriosam, quaerat sequi maxime
+              exercitationem expedita a. Nam illum voluptas unde?
+            </AnimatedCardContent>
+
+            <AnimatedCardFooter>
+              <Link href="#">Learn More</Link>
+            </AnimatedCardFooter>
+          </AnimatedCard>
+
+          <AnimatedCard>
+            <AnimatedCardHeader>
+              <AnimatedCardTitle>Social</AnimatedCardTitle>
+              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
+            </AnimatedCardHeader>
+
+            <AnimatedCardContent>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              distinctio totam consequuntur dignissimos autem modi voluptatum,
+              facilis reiciendis quod laboriosam, quaerat sequi maxime
+              exercitationem expedita a. Nam illum voluptas unde?
+            </AnimatedCardContent>
+
+            <AnimatedCardFooter>
+              <Link href="#">Learn More</Link>
+            </AnimatedCardFooter>
+          </AnimatedCard>
+        </div>
+      </section>
 
       {/* Features */}
       <section></section>
