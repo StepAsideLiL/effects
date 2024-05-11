@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Header */}
       <header className="py-5">
         <div className="container flex items-center gap-10">
-          <h1 className="text-2xl">Logo</h1>
+          <div className="select-none text-2xl font-semibold">Logo</div>
 
           <nav className="flex-1">
             <ul className="flex items-center gap-5">
