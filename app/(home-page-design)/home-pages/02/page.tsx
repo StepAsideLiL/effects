@@ -32,6 +32,27 @@ import { Textarea } from "./_uis/textarea";
 import { Button } from "@/components/ui/button";
 import Marquee from "react-fast-marquee";
 
+const products = [
+  {
+    title: "Social",
+    description: "Social Media AD",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio totam consequuntur dignissimos autem modi voluptatum, facilis reiciendis quod laboriosam, quaerat sequi maxime exercitationem expedita a. Nam illum voluptas unde?",
+  },
+  {
+    title: "Design",
+    description: "Web site and App Design",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio totam consequuntur dignissimos autem modi voluptatum, facilis reiciendis quod laboriosam, quaerat sequi maxime exercitationem expedita a. Nam illum voluptas unde?",
+  },
+  {
+    title: "Development",
+    description: "Web site and App Development",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio totam consequuntur dignissimos autem modi voluptatum, facilis reiciendis quod laboriosam, quaerat sequi maxime exercitationem expedita a. Nam illum voluptas unde?",
+  },
+];
+
 const features = [
   {
     title: "Web Site",
@@ -196,59 +217,22 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-3 gap-5">
-          <AnimatedCard>
-            <AnimatedCardHeader>
-              <AnimatedCardTitle>Social</AnimatedCardTitle>
-              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
-            </AnimatedCardHeader>
+          {products.map((product, i) => (
+            <AnimatedCard key={i}>
+              <AnimatedCardHeader>
+                <AnimatedCardTitle>{product.title}</AnimatedCardTitle>
+                <AnimatedCardDescription>
+                  {product.description}
+                </AnimatedCardDescription>
+              </AnimatedCardHeader>
 
-            <AnimatedCardContent>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              distinctio totam consequuntur dignissimos autem modi voluptatum,
-              facilis reiciendis quod laboriosam, quaerat sequi maxime
-              exercitationem expedita a. Nam illum voluptas unde?
-            </AnimatedCardContent>
+              <AnimatedCardContent>{product.content}</AnimatedCardContent>
 
-            <AnimatedCardFooter>
-              <Link href="#">Learn More</Link>
-            </AnimatedCardFooter>
-          </AnimatedCard>
-
-          <AnimatedCard>
-            <AnimatedCardHeader>
-              <AnimatedCardTitle>Social</AnimatedCardTitle>
-              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
-            </AnimatedCardHeader>
-
-            <AnimatedCardContent>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              distinctio totam consequuntur dignissimos autem modi voluptatum,
-              facilis reiciendis quod laboriosam, quaerat sequi maxime
-              exercitationem expedita a. Nam illum voluptas unde?
-            </AnimatedCardContent>
-
-            <AnimatedCardFooter>
-              <Link href="#">Learn More</Link>
-            </AnimatedCardFooter>
-          </AnimatedCard>
-
-          <AnimatedCard>
-            <AnimatedCardHeader>
-              <AnimatedCardTitle>Social</AnimatedCardTitle>
-              <AnimatedCardDescription>Social Media AD</AnimatedCardDescription>
-            </AnimatedCardHeader>
-
-            <AnimatedCardContent>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-              distinctio totam consequuntur dignissimos autem modi voluptatum,
-              facilis reiciendis quod laboriosam, quaerat sequi maxime
-              exercitationem expedita a. Nam illum voluptas unde?
-            </AnimatedCardContent>
-
-            <AnimatedCardFooter>
-              <Link href="#">Learn More</Link>
-            </AnimatedCardFooter>
-          </AnimatedCard>
+              <AnimatedCardFooter>
+                <Link href="#">Learn More</Link>
+              </AnimatedCardFooter>
+            </AnimatedCard>
+          ))}
         </div>
 
         <div className="pb-20">
