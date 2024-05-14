@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 import Link from "next/link";
 import { SiFacebook, SiInstagram, SiLinkedin, SiYoutube } from "react-icons/si";
+import PageProgressBar from "./_uis/page-progress-bar";
 
 export const metadata: Metadata = {
   title: "Home Page 02",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <PageProgressBar />
       {/* Header */}
       <header className="py-5">
         <div className="container flex items-center gap-10">
