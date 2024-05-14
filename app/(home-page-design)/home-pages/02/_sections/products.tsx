@@ -1,13 +1,5 @@
-import Link from "next/link";
-import {
-  AnimatedCard,
-  AnimatedCardContent,
-  AnimatedCardDescription,
-  AnimatedCardFooter,
-  AnimatedCardHeader,
-  AnimatedCardTitle,
-} from "../_uis/animated-card";
 import { Separator } from "@/components/ui/separator";
+import ProductCard from "../_uis/product-card";
 
 const products = [
   {
@@ -43,20 +35,12 @@ export default function Products() {
 
       <div className="grid grid-cols-3 gap-5">
         {products.map((product, i) => (
-          <AnimatedCard key={i}>
-            <AnimatedCardHeader>
-              <AnimatedCardTitle>{product.title}</AnimatedCardTitle>
-              <AnimatedCardDescription>
-                {product.description}
-              </AnimatedCardDescription>
-            </AnimatedCardHeader>
-
-            <AnimatedCardContent>{product.content}</AnimatedCardContent>
-
-            <AnimatedCardFooter>
-              <Link href="#">Learn More</Link>
-            </AnimatedCardFooter>
-          </AnimatedCard>
+          <ProductCard
+            key={i}
+            title={product.title}
+            description={product.description}
+            content={product.content}
+          />
         ))}
       </div>
 
