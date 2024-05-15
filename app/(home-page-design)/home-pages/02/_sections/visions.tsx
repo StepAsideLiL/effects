@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import Balancer from "react-wrap-balancer";
-import InViewElement, { ShowInViewElement } from "../_uis/in-view-element";
+import { InViewElement, ShowInViewElement } from "../_uis/in-view-element";
 
 const ourVisions = [
   {
