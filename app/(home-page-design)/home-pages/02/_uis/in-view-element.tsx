@@ -7,49 +7,35 @@ import { useEffect, useRef } from "react";
 import { create } from "zustand";
 
 type StoreViewElement = {
-  index: number;
   value: string;
-  setIndex: (value: number) => void;
   setValue: (value: string) => void;
 };
 
 export const useStoreViewElement = create<StoreViewElement>((set) => ({
-  index: 1,
   value: "",
-  setIndex: (v) => set(() => ({ index: v })),
   setValue: (v) => set(() => ({ value: v })),
 }));
 
 export function InViewElement({
   children,
   className,
-  key,
   value,
   defaultValue,
 }: {
   children?: React.ReactNode;
   className?: string;
-  key?: number;
   value?: string;
   defaultValue?: string | number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
-  const [setIndex, setValue] = useStoreViewElement((s) => [
-    s.setIndex,
-    s.setValue,
-  ]);
+  const setValue = useStoreViewElement((s) => s.setValue);
 
   useEffect(() => {
-    if (isInView) {
-      if (value) {
-        setValue(value);
-      }
-      if (key) {
-        setIndex(key);
-      }
+    if (isInView && value) {
+      setValue(value);
     }
-  }, [isInView, key, setIndex, setValue, value]);
+  }, [isInView, setValue, value]);
 
   return (
     <div ref={ref} className={cn("flex h-screen items-center", className)}>
@@ -59,9 +45,8 @@ export function InViewElement({
 }
 
 export function ShowInViewElement({ className }: { className?: string }) {
-  const [index, value] = useStoreViewElement((s) => [s.index, s.value]);
+  const value = useStoreViewElement((s) => s.value);
 
-  console.log("index => ", index);
   console.log("value => ", value);
 
   return (
@@ -75,7 +60,6 @@ export function ShowInViewElement({ className }: { className?: string }) {
         className={cn("absolute aspect-square w-96 bg-red-700", className)}
       >
         <Image
-          key={value}
           src={value}
           alt="Image"
           width={1000}
