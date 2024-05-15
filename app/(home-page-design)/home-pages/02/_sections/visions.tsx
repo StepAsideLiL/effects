@@ -1,6 +1,8 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
 import Balancer from "react-wrap-balancer";
+import InViewElement, { ShowInViewElement } from "../_uis/in-view-element";
 
 const ourVisions = [
   {
@@ -30,34 +32,34 @@ export default function Visions() {
   return (
     <section className="py-20">
       <div className="min-h-screen w-full">
-        {ourVisions.map((list, i) => (
-          <div key={i} className="flex min-h-screen w-full items-center">
-            <div className="w-full">
-              <Image
-                src={list.image}
-                alt="Image"
-                width={1000}
-                height={1000}
-                className="min-h-screen object-cover"
-              />
-            </div>
-
-            <div className="flex w-full flex-col">
-              <div className="mx-auto max-w-lg">
-                <Badge variant={"secondary"} className="w-fit">
-                  {list.bagde}
-                </Badge>
-                <Balancer
-                  className="mb-8 mt-2 text-4xl font-semibold"
-                  as={"h1"}
-                >
-                  {list.title}
-                </Balancer>
-                <p>{list.description}</p>
-              </div>
-            </div>
+        <div className="flex w-full items-start">
+          <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
+            <ShowInViewElement />
           </div>
-        ))}
+
+          <div className="w-full">
+            {ourVisions.map((list, i) => (
+              <InViewElement
+                key={i}
+                value={list.image}
+                defaultValue={ourVisions[0].image}
+              >
+                <div className="mx-auto flex max-w-lg flex-col">
+                  <Badge variant={"secondary"} className="w-fit">
+                    {list.bagde}
+                  </Badge>
+                  <Balancer
+                    className="mb-8 mt-2 text-4xl font-semibold"
+                    as={"h1"}
+                  >
+                    {list.title}
+                  </Balancer>
+                  <p>{list.description}</p>
+                </div>
+              </InViewElement>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
