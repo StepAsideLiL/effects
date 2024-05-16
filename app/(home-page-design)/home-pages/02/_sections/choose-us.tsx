@@ -56,7 +56,7 @@ export default function ChooseUs() {
                 Step {i + 1}
               </CardDescription>
               <CardTitle className="w-2/3 text-4xl">{list.title}</CardTitle>
-              <span className="absolute right-3 top-3 -z-10 select-none text-[280px] font-bold leading-none text-muted">
+              <span className="absolute -top-5 right-3 -z-10 select-none text-[280px] font-bold leading-none text-muted">
                 {i + 1}
               </span>
             </CardHeader>
