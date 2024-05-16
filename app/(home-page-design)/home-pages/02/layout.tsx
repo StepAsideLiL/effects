@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { SiFacebook, SiInstagram, SiLinkedin, SiYoutube } from "react-icons/si";
 import PageProgressBar from "./_uis/page-progress-bar";
+import FancyCursor from "./_uis/fancy-cursor";
 
 export const metadata: Metadata = {
   title: "Home Page 02",
@@ -13,6 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <PageProgressBar />
+      <FancyCursor />
       {/* Header */}
       <header className="py-5">
         <div className="container flex items-center gap-10">
