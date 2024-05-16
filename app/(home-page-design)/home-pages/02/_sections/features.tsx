@@ -13,22 +13,35 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  FcSmartphoneTablet,
+  FcSettings,
+  FcGlobe,
+  FcAreaChart,
+  FcServices,
+} from "react-icons/fc";
+import { Floating } from "../_uis/floating";
 
 const features = [
   {
     title: "Web Site",
+    icon: FcGlobe,
   },
   {
     title: "Plugins",
+    icon: FcSettings,
   },
   {
     title: "Analytics",
+    icon: FcAreaChart,
   },
   {
     title: "API Service",
+    icon: FcServices,
   },
   {
     title: "Mobile App",
+    icon: FcSmartphoneTablet,
   },
 ];
 
@@ -60,11 +73,17 @@ export default function Features() {
                     </CardTitle>
                   </CardHeader>
 
-                  <CardContent>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quis sapiente saepe nulla amet sunt odio doloremque,
-                    distinctio optio tempore. Voluptatum recusandae repudiandae
-                    quia iure voluptas, reiciendis modi quidem nam itaque.
+                  <CardContent className="flex flex-col items-center gap-10">
+                    <p className="text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quis sapiente saepe nulla amet sunt odio doloremque,
+                      distinctio optio tempore. Voluptatum recusandae
+                      repudiandae quia iure voluptas, reiciendis modi quidem nam
+                      itaque.
+                    </p>
+                    <Floating>
+                      <feature.icon size={46} />
+                    </Floating>
                   </CardContent>
 
                   <CardFooter className="justify-center border-t p-6">
