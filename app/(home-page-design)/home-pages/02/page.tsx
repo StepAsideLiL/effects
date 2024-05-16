@@ -33,7 +33,7 @@ export default function Page() {
       <Separator className="bg-primary" />
 
       {/* Throwable Physics elements */}
-      <FallingElement />
+      {/* <FallingElement /> */}
 
       {/* Top Brands & Agencies */}
       <BrandsAndAgencies />
