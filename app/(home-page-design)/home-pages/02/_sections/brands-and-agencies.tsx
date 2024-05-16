@@ -27,7 +27,7 @@ export default function BrandsAndAgencies() {
           {companies.map((company, i) => (
             <div
               key={i}
-              className="mx-20 flex size-56 select-none items-center justify-center overflow-hidden rounded-full bg-muted text-center text-2xl font-medium"
+              className="mx-20 flex size-56 select-none items-center justify-center overflow-hidden rounded-full bg-muted p-5 text-center text-2xl font-medium"
             >
               {company}
             </div>
