@@ -136,7 +136,7 @@ export default function FancyCursor({
   outerScale = 6,
   outerSize = 64,
   outerStyle,
-  showSystemCursor = false,
+  showSystemCursor = true,
   trailingSpeed = 8,
 }: CursorProps) {
   const defaultOptions = useMemo(
@@ -219,9 +219,7 @@ export default function FancyCursor({
     };
   }, [animateOuterCursor]);
 
-  /**
-   * Calculates amount to scale cursor in px3
-   */
+  // Calculates amount to scale cursor in px3
   const getScaleAmount = (orignalSize: number, scaleAmount: number) => {
     return `${parseInt(String(orignalSize * scaleAmount))}px`;
   };
@@ -302,7 +300,7 @@ export default function FancyCursor({
     isActiveClickable,
   ]);
 
-  // Cursor Visibility Statea
+  // Cursor Visibility State
   useEffect(() => {
     if (cursorInnerRef.current == null || cursorOuterRef.current == null)
       return;
@@ -410,19 +408,6 @@ export default function FancyCursor({
       document.body.style.cursor = "none";
     }
   }, [showSystemCursor]);
-
-  // return (
-  //   <div>
-  //     <div
-  //       ref={cursorOuterRef}
-  //       className="fixed -z-10 size-10 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4"
-  //     ></div>
-  //     <div
-  //       ref={cursorInnerRef}
-  //       className="fixed z-20 size-1 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-foreground"
-  //     ></div>
-  //   </div>
-  // );
 
   const coreStyles: CSSProperties = {
     zIndex: 999,
